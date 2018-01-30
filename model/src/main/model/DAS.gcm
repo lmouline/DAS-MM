@@ -1,0 +1,65 @@
+index KNOWLEDGE: Knowledge using name
+index Strategies: Strategy using name
+
+
+class Knowledge {
+    att name: String
+
+    rel context: Context
+    rel strategies: Strategy
+    rel requirements: Requirement
+}
+
+class Decision {
+    ref execute: Strategy oppositeOf isExecutedBy
+    ref goals: Goal
+    ref input: Value oppositeOf inputOf
+    ref impact: Value oppositeOf impactedBy
+}
+
+// Context mm
+class Context {
+    ref decisions: Decision
+}
+
+class Property {
+    ref values: Value oppositeOf valueOf
+    ref expected: Value oppositeOf expectedOf
+}
+
+class Value {
+    ref inputOf: Decision oppositeOf input
+    ref impactedBy: Decision oppositeOf impact
+
+    ref valueOf: Property oppositeOf values
+    ref expectedOf: Property oppositeOf expected
+}
+
+// Action mm
+class Strategy {
+    att name: String
+
+    ref isExecutedBy: Decision oppositeOf execute
+
+    ref tactics: Tactic
+}
+
+class Tactic {
+    att name: String
+    rel condition: Condition
+}
+
+class Condition {
+    ref implement: Goal oppositeOf isImplementedBy
+    ref input: Property
+}
+
+
+// Requirement mm
+class Requirement {
+    ref goals: Goal
+}
+
+class Goal {
+    ref isImplementedBy: Condition oppositeOf implement
+}
