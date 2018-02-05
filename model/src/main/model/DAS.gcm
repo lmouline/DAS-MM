@@ -1,4 +1,4 @@
-index KNOWLEDGE: Knowledge using name
+index Knowledges: Knowledge using name
 index Strategies: Strategy using name
 
 const TYPE_NUMERICAL: String = "Type::Numerical"
@@ -16,7 +16,7 @@ class Knowledge {
 }
 
 class Decision {
-    ref execute: Strategy oppositeOf isExecutedBy
+    ref execute: Tactic oppositeOf isExecutedBy
     ref goals: Goal
     ref input: Value oppositeOf inputOf
     ref impact: Value oppositeOf impactedBy
@@ -134,17 +134,19 @@ class Requirement {
     ref goals: Goal oppositeOf requirement
 }
 
+class Natures {
+    att name: String
+}
+
 class Goal {
     att goal: String
     ref isImplementedBy: Condition oppositeOf implement
     ref requirement: Requirement oppositeOf goals
 
-    rel nature: Nature
+    rel nature: Natures
 }
 
-class Nature {
-    att name: String
-}
+
 
 class Constraint extends nature {
     rel applyOn: ConstrainedNature

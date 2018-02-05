@@ -31,6 +31,14 @@
         <header.path>${basedir}/../HEADER</header.path>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.datathings</groupId>
+            <artifactId>greycat</artifactId>
+            <version>${greycat.version}</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -46,6 +54,9 @@
                         </goals>
                         <configuration>
                             <generateJS>false</generateJS>
+                            <input>${basedir}/src/main/model/DAS.gcm</input>
+                            <pluginName>DASModelPlugin</pluginName>
+                            <packageName>das.model</packageName>
                         </configuration>
                     </execution>
                 </executions>
