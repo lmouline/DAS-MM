@@ -1,6 +1,10 @@
 index KNOWLEDGE: Knowledge using name
 index Strategies: Strategy using name
 
+const TYPE_NUMERICAL: String = "Type::Numerical"
+const TYPE_BOOLEAN: String = "Type::Boolean"
+const TYPE_TEXT: String = "Type::Text"
+const TYPE_BYTE: String = "Type::Byte"
 
 class Knowledge {
     att name: String
@@ -8,6 +12,7 @@ class Knowledge {
     rel context: Context
     rel strategies: Strategy
     rel requirements: Requirement
+    rel decisions: Decision
 }
 
 class Decision {
@@ -19,13 +24,58 @@ class Decision {
 
 // Context mm
 class Context {
-    ref decisions: Decision
+    att name: String
+
+    ref globals: Attribute
+    ref structures: Structure
+}
+
+class  Structure {
+    att name: String
+
+    ref inner: Structure
+    ref properties: Property
+    ref values: StructureValue oppositeOf structure
+}
+
+class StructureValue {
+    ref structure: Structure oppositeOf values
+    ref values: Value
 }
 
 class Property {
+    att name: String
+    att isHistoric: Boolean
+    att isStatic: Boolean
+
+    ref values: Value oppositeOf valueOf
+    ref expected: Value oppositeOf expectedOf
+
+    ref consistentWith: Property oppositeOf isConsistentWith
+    ref isConsistentWith: Property oppositeOf consistentWith
+
+    ref computedUsing: Property oppositeOf computationInput
+    ref computationInput: Property oppositeOf computedUsing
+
+    ref influence: Property oppositeOf isInfluencedBy
+    ref isInfluencedBy: Property oppositeOf influence
+
+    rel source: Source
+    ref uncertainty: Uncertainty
+
     ref values: Value oppositeOf valueOf
     ref expected: Value oppositeOf expectedOf
 }
+
+class Attribute extends Property{
+    att typeAtt: String
+    att isArray: Boolean
+}
+
+class Relation extends Property {
+    rel opposite: Relation
+}
+
 
 class Value {
     ref inputOf: Decision oppositeOf input
@@ -33,20 +83,35 @@ class Value {
 
     ref valueOf: Property oppositeOf values
     ref expectedOf: Property oppositeOf expected
+
+    ref uncertainty: Uncertainty
+}
+
+class Source {
+    att srcType: String
+    ref info: Property
+}
+
+class Uncertainty {
+    att value: Double
 }
 
 // Action mm
 class Strategy {
     att name: String
 
-    ref isExecutedBy: Decision oppositeOf execute
-
-    ref tactics: Tactic
+    ref tactics: Tactic oppositeOf startegy
 }
 
 class Tactic {
     att name: String
+
+    rel strategy: Strategy oppositeOf tactics
     rel condition: Condition
+    ref actions: Action
+
+    ref isExecutedBy: Decision oppositeOf execute
+
 }
 
 class Condition {
@@ -54,12 +119,38 @@ class Condition {
     ref input: Property
 }
 
+class Action {
+    att name: String
+    att status: String
+
+    ref impacted: Value
+}
+
 
 // Requirement mm
 class Requirement {
-    ref goals: Goal
+    att name: String
+
+    ref goals: Goal oppositeOf requirement
 }
 
 class Goal {
+    att goal: String
     ref isImplementedBy: Condition oppositeOf implement
+    ref requirement: Requirement oppositeOf goals
+
+    rel nature: Nature
 }
+
+class Nature {
+    att name: String
+}
+
+class Constraint extends nature {
+    rel applyOn: ConstrainedNature
+}
+
+class ConstrainedNature {}
+class Functional extends ConstrainedNature {}
+class Performance extends ConstrainedNature {}
+class Quality extends ConstrainedNature {}
