@@ -134,7 +134,7 @@ class Requirement {
     ref goals: Goal oppositeOf requirement
 }
 
-class Natures {
+class Nature {
     att name: String
 }
 
@@ -143,12 +143,12 @@ class Goal {
     ref isImplementedBy: Condition oppositeOf implement
     ref requirement: Requirement oppositeOf goals
 
-    rel nature: Natures
+    rel nature: Nature
 }
 
 
 
-class Constraint extends nature {
+class Constraint extends Nature {
     rel applyOn: ConstrainedNature
 }
 
