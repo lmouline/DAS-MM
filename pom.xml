@@ -21,7 +21,7 @@
     <groupId>snt.das</groupId>
     <artifactId>root</artifactId>
     <packaging>pom</packaging>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <modules>
         <module>model</module>
     </modules>
@@ -30,7 +30,7 @@
 
     <properties>
         <header.path>${basedir}/HEADER</header.path>
-        <greycat.version>10</greycat.version>
+        <greycat.version>10.7</greycat.version>
     </properties>
 
     <scm>
@@ -90,6 +90,20 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>datathings.public</id>
+            <url>https://registry.datathings.com/repository/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>datathings.public</id>
+            <url>https://registry.datathings.com/repository/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 
 </project>

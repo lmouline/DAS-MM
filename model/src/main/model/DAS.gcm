@@ -1,5 +1,6 @@
 index Knowledges: Knowledge using name
 index Strategies: Strategy using name
+index Natures: Nature using name
 
 const TYPE_NUMERICAL: String = "Type::Numerical"
 const TYPE_BOOLEAN: String = "Type::Boolean"
@@ -152,7 +153,7 @@ class Constraint extends Nature {
     rel applyOn: ConstrainedNature
 }
 
-class ConstrainedNature {}
+class ConstrainedNature extends Nature {}
 class Functional extends ConstrainedNature {}
 class Performance extends ConstrainedNature {}
 class Quality extends ConstrainedNature {}
