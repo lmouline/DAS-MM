@@ -72,6 +72,7 @@
                         <exclude>HEADER</exclude>
                         <exclude>LICENSE</exclude>
                         <exclude>NOTICE</exclude>
+                        <exclude>**/*.sh</exclude>
                     </excludes>
                 </configuration>
                 <executions>
