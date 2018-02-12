@@ -10,38 +10,38 @@ const TYPE_BYTE: String = "Type::Byte"
 class Knowledge {
     att name: String
 
-    rel context: Context
+    ref context: Context
     rel strategies: Strategy
     rel requirements: Requirement
     rel decisions: Decision
 }
 
 class Decision {
-    ref execute: Tactic oppositeOf isExecutedBy
-    ref goals: Goal
-    ref input: Value oppositeOf inputOf
-    ref impact: Value oppositeOf impactedBy
+    rel execute: Tactic oppositeOf isExecutedBy
+    rel goals: Goal
+    rel input: Value oppositeOf inputOf
+    rel impact: Value oppositeOf impactedBy
 }
 
 // Context mm
 class Context {
     att name: String
 
-    ref globals: Attribute
-    ref structures: Structure
+    rel globals: Attribute
+    rel structures: Structure
 }
 
 class  Structure {
     att name: String
 
-    ref inner: Structure
-    ref properties: Property
-    ref values: StructureValue oppositeOf structure
+    rel inner: Structure
+    rel properties: Property
+    rel values: StructureValue oppositeOf structure
 }
 
 class StructureValue {
     ref structure: Structure oppositeOf values
-    ref values: Value
+    rel values: Value
 }
 
 class Property {
@@ -49,23 +49,23 @@ class Property {
     att isHistoric: Boolean
     att isStatic: Boolean
 
-    ref values: Value oppositeOf valueOf
-    ref expected: Value oppositeOf expectedOf
+    rel values: Value oppositeOf valueOf
+    rel expected: Value oppositeOf expectedOf
 
-    ref consistentWith: Property oppositeOf isConsistentWith
-    ref isConsistentWith: Property oppositeOf consistentWith
+    rel consistentWith: Property oppositeOf isConsistentWith
+    rel isConsistentWith: Property oppositeOf consistentWith
 
-    ref computedUsing: Property oppositeOf computationInput
-    ref computationInput: Property oppositeOf computedUsing
+    rel computedUsing: Property oppositeOf computationInput
+    rel computationInput: Property oppositeOf computedUsing
 
-    ref influence: Property oppositeOf isInfluencedBy
-    ref isInfluencedBy: Property oppositeOf influence
+    rel influence: Property oppositeOf isInfluencedBy
+    rel isInfluencedBy: Property oppositeOf influence
 
-    rel source: Source
-    ref uncertainty: Uncertainty
+    ref source: Source
+    rel uncertainty: Uncertainty
 
-    ref values: Value oppositeOf valueOf
-    ref expected: Value oppositeOf expectedOf
+    rel values: Value oppositeOf valueOf
+    rel expected: Value oppositeOf expectedOf
 }
 
 class Attribute extends Property{
@@ -74,23 +74,23 @@ class Attribute extends Property{
 }
 
 class Relation extends Property {
-    rel opposite: Relation
+    ref opposite: Relation
 }
 
 
 class Value {
-    ref inputOf: Decision oppositeOf input
-    ref impactedBy: Decision oppositeOf impact
+    rel inputOf: Decision oppositeOf input
+    rel impactedBy: Decision oppositeOf impact
 
-    ref valueOf: Property oppositeOf values
-    ref expectedOf: Property oppositeOf expected
+    rel valueOf: Property oppositeOf values
+    rel expectedOf: Property oppositeOf expected
 
-    ref uncertainty: Uncertainty
+    rel uncertainty: Uncertainty
 }
 
 class Source {
     att srcType: String
-    ref info: Property
+    rel info: Property
 }
 
 class Uncertainty {
@@ -101,30 +101,30 @@ class Uncertainty {
 class Strategy {
     att name: String
 
-    ref tactics: Tactic oppositeOf startegy
+    rel tactics: Tactic oppositeOf strategy
 }
 
 class Tactic {
     att name: String
 
-    rel strategy: Strategy oppositeOf tactics
-    rel condition: Condition
-    ref actions: Action
+    ref strategy: Strategy oppositeOf tactics
+    ref condition: Condition
+    rel actions: Action
 
-    ref isExecutedBy: Decision oppositeOf execute
+    rel isExecutedBy: Decision oppositeOf execute
 
 }
 
 class Condition {
-    ref implement: Goal oppositeOf isImplementedBy
-    ref input: Property
+    rel implement: Goal oppositeOf isImplementedBy
+    rel input: Property
 }
 
 class Action {
     att name: String
     att status: String
 
-    ref impacted: Value
+    rel impacted: Value
 }
 
 
@@ -132,7 +132,7 @@ class Action {
 class Requirement {
     att name: String
 
-    ref goals: Goal oppositeOf requirement
+    rel goals: Goal oppositeOf requirement
 }
 
 class Nature {
@@ -141,16 +141,16 @@ class Nature {
 
 class Goal {
     att goal: String
-    ref isImplementedBy: Condition oppositeOf implement
+    rel isImplementedBy: Condition oppositeOf implement
     ref requirement: Requirement oppositeOf goals
 
-    rel nature: Nature
+    ref nature: Nature
 }
 
 
 
 class Constraint extends Nature {
-    rel applyOn: ConstrainedNature
+    ref applyOn: ConstrainedNature
 }
 
 class ConstrainedNature extends Nature {}
