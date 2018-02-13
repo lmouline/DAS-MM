@@ -106,5 +106,18 @@
         </pluginRepository>
     </pluginRepositories>
 
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>http://maven.inria.fr-releases</name>
+            <url>http://maven.inria.fr/artifactory/ldas-public-release</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>http://maven.inria.fr-snapshots</name>
+            <url>http://maven.inria.fr/artifactory/ldas-public-snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>

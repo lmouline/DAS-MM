@@ -15,4 +15,4 @@
 #!/usr/bin/env bash
 mvn release:clean
 mvn release:prepare
-mvn release:perform -Darguments="-Dmaven.deploy.skip=true -Dmaven.javadoc.skip=true"
+mvn release:perform -Darguments="-Dmaven.javadoc.skip=true"
