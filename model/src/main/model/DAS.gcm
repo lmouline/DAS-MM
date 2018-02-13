@@ -75,6 +75,7 @@ class Attribute extends Property{
 
 class Relation extends Property {
     ref opposite: Relation
+    ref typeRel: Structure
 }
 
 
