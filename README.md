@@ -11,7 +11,7 @@ This repository is my main playground to develop techniques for (self-)adaptive 
 
 ### Dependencies
 
-- GreyCat, v10.8
+- [GreyCat, v10.8](https://github.com/datathings/greycat)
 
 ### How to use it
 
