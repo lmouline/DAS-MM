@@ -63,9 +63,6 @@ class Property {
 
     ref source: Source
     rel uncertainty: Uncertainty
-
-    rel values: Value oppositeOf valueOf
-    rel expected: Value oppositeOf expectedOf
 }
 
 class Attribute extends Property{
@@ -110,7 +107,7 @@ class Tactic {
 
     ref strategy: Strategy oppositeOf tactics
     ref condition: Condition
-    rel actions: Action
+    rel actions: Action oppositeOf tactic
 
     rel isExecutedBy: Decision oppositeOf execute
 
@@ -126,6 +123,7 @@ class Action {
     att status: String
 
     rel impacted: Value
+    ref tactic: Tactic oppositeOf actions
 }
 
 
