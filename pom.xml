@@ -30,7 +30,7 @@
 
     <properties>
         <header.path>${basedir}/HEADER</header.path>
-        <greycat.version>10.7</greycat.version>
+        <greycat.version>10.8</greycat.version>
     </properties>
 
     <scm>
