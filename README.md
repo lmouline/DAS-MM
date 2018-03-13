@@ -9,6 +9,13 @@ This repository is my main playground to develop techniques for (self-)adaptive 
 
 ## Model
 
+### Graphical version
+
+![](img/action-mm.svg)
+![](img/context-mm.svg)
+![](img/requirement-mm.svg)
+![](img/knowledge-mm.svg)
+
 ### Dependencies
 
 - [GreyCat, v10.8](https://github.com/datathings/greycat)

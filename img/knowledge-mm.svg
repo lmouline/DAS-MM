@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-30.5 587.375 611 318.625" width="611" height="318.625">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="StickArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 0 0 M 0 -3 L 8 0 L 0 3" fill="none" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledDiamond_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-9 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M -8 0 L -4 3 L 0 0 L -4 -3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledDiamond_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 4 -3 L 0 0 L 4 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.7.1 
+    <dc:date>2018-03-13 09:45:48 +0000</dc:date>
+  </metadata>
+  <g id="MM-Global-Final" fill-opacity="1" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill="none">
+    <title>MM-Global-Final</title>
+    <g id="MM-Global-Final: Layer 1">
+      <title>Layer 1</title>
+      <g id="Graphic_61">
+        <rect x="259" y="801.5" width="72" height="30" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(264 807.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">Decision</tspan>
+        </text>
+      </g>
+      <g id="Graphic_60">
+        <rect x="227.5" y="718.5" width="144" height="30" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(232.5 724.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".168" y="15">Requirement::Goal</tspan>
+        </text>
+      </g>
+      <g id="Line_59">
+        <line x1="266.0625" y1="801.5" x2="266.0625" y2="758.4" marker-end="url(#StickArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_58">
+        <rect x="450.59375" y="800" width="115" height="30" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(455.59375 805.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".492" y="15">Context::Value</tspan>
+        </text>
+      </g>
+      <g id="Line_57">
+        <line x1="331" y1="806.303" x2="450.59375" y2="805.7117" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_56">
+        <line x1="331" y1="825.9735" x2="450.59375" y2="825.4811" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_55">
+        <rect x="269.5625" y="588" width="91" height="30" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(274.5625 593.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".356" y="15">Knowledge</tspan>
+        </text>
+      </g>
+      <g id="Graphic_54">
+        <rect x="435" y="655" width="133" height="30" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(440 660.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".46" y="15">Context::Context</tspan>
+        </text>
+      </g>
+      <g id="Graphic_53">
+        <rect x="214.0625" y="655" width="202" height="30" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(219.0625 660.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".256" y="15">Requirement::Requirement</tspan>
+        </text>
+      </g>
+      <g id="Graphic_52">
+        <rect x="70.125" y="655" width="125" height="30" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(75.125 660.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".164" y="15">Action::Strategy</tspan>
+        </text>
+      </g>
+      <g id="Line_51">
+        <line x1="311.38632" y1="685" x2="303.17618" y2="718.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_50">
+        <rect x="-19" y="773.5" width="134" height="30" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-14 779.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".064" y="15">Action::Condition</tspan>
+        </text>
+      </g>
+      <g id="Line_49">
+        <line x1="315.0625" y1="627.25" x2="315.0625" y2="645.1" marker-end="url(#StickArrow_Marker)" marker-start="url(#FilledDiamond_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_48">
+        <path d="M 260.3125 603 L 133 603 L 132.76436 645.10016" marker-end="url(#StickArrow_Marker)" marker-start="url(#FilledDiamond_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_47">
+        <path d="M 369.8125 611 L 501.5 611 L 501.5 645.1" marker-end="url(#StickArrow_Marker)" marker-start="url(#FilledDiamond_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_46">
+        <line x1="115" y1="773.8479" x2="230.9091" y2="748.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_45">
+        <path d="M 259 816.6129 L -23.96335 817.5 L -23.649926 741 L 77.375 741" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_44">
+        <rect x="439.59375" y="704.5" width="137" height="30" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(444.59375 710.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".236" y="15">Context::Property</tspan>
+        </text>
+      </g>
+      <g id="Line_43">
+        <line x1="457.97053" y1="800" x2="457.249" y2="743.7492" marker-end="url(#FilledDiamond_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_42">
+        <line x1="556.0249" y1="800" x2="555.2598" y2="743.74914" marker-end="url(#FilledDiamond_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_41">
+        <path d="M 369.8125 591 L 580 591 L 580 903 L 295 903 L 295 841.4" marker-end="url(#StickArrow_Marker)" marker-start="url(#FilledDiamond_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_40">
+        <text transform="translate(58 630.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".04" y="15">strategies</tspan>
+        </text>
+      </g>
+      <g id="Graphic_39">
+        <text transform="translate(138 635.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_38">
+        <text transform="translate(509 630.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">context</tspan>
+        </text>
+      </g>
+      <g id="Graphic_37">
+        <text transform="translate(486.125 635.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".052" y="15">1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_36">
+        <text transform="translate(323 630.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".312" y="15">requirements</tspan>
+        </text>
+      </g>
+      <g id="Graphic_35">
+        <text transform="translate(304.0625 635.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_34">
+        <text transform="translate(120 779.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".496" y="15">implement</tspan>
+        </text>
+      </g>
+      <g id="Graphic_33">
+        <text transform="translate(197.1875 727.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".288" y="15">1..*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_32">
+        <text transform="translate(115.5 752.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".288" y="15">1..*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_31">
+        <text transform="translate(310 698.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".244" y="15">goals</tspan>
+        </text>
+      </g>
+      <g id="Graphic_30">
+        <text transform="translate(294 706.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_29">
+        <text transform="translate(21.8 739.976)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".204" y="15">execute</tspan>
+        </text>
+      </g>
+      <g id="Graphic_28">
+        <text transform="translate(35.25 724.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".288" y="15">1..*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_27">
+        <text transform="translate(274.5625 746.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".244" y="15">goals</tspan>
+        </text>
+      </g>
+      <g id="Graphic_26">
+        <text transform="translate(237.0625 749.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".288" y="15">1..*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_25">
+        <text transform="translate(362 828.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".044" y="15">impact</tspan>
+        </text>
+      </g>
+      <g id="Graphic_24">
+        <text transform="translate(432 814.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_23">
+        <text transform="translate(335 828.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_22">
+        <text transform="translate(362 784.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".064" y="15">input</tspan>
+        </text>
+      </g>
+      <g id="Graphic_21">
+        <text transform="translate(429.65625 792.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_20">
+        <text transform="translate(335 805.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_19">
+        <text transform="translate(222.5 837.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".072" y="15">decisions</tspan>
+        </text>
+      </g>
+      <g id="Graphic_18">
+        <text transform="translate(300.5 837.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_17">
+        <text transform="translate(486.125 779.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".164" y="15">expected</tspan>
+        </text>
+      </g>
+      <g id="Graphic_16">
+        <text transform="translate(409.65625 762.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">values</tspan>
+        </text>
+      </g>
+      <g id="Graphic_15">
+        <text transform="translate(559.5 784.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_14">
+        <text transform="translate(461.5 765.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_13">
+        <rect x="444.25" y="865" width="110.5" height="30" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(449.25 870.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".17" y="15">Action::Action</tspan>
+        </text>
+      </g>
+      <g id="Graphic_12">
+        <rect x="77.375" y="714.25" width="110.5" height="30" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(82.375 720.026)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="2.098" y="15">Action::Tactic</tspan>
+        </text>
+      </g>
+      <g id="Line_11">
+        <line x1="132.625" y1="694.25" x2="132.625" y2="714.25" marker-start="url(#FilledDiamond_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_10">
+        <text transform="translate(142.875 701.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_9">
+        <text transform="translate(82.375 696.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".296" y="15">tactics</tspan>
+        </text>
+      </g>
+      <g id="Graphic_8">
+        <text transform="translate(504.59375 828.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".004" y="15">impacted</tspan>
+        </text>
+      </g>
+      <g id="Graphic_7">
+        <text transform="translate(489.125 830.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Line_6">
+        <line x1="499.5238" y1="865" x2="499.56365" y2="839.9" marker-end="url(#StickArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_5">
+        <path d="M 68.125 717 L -30 717 L -30 880 L 289.5 880 C 289.5 874.5 300.5 874.5 300.5 880 L 434.35 880" marker-end="url(#StickArrow_Marker)" marker-start="url(#FilledDiamond_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_4">
+        <text transform="translate(420 881.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".184" y="15">*</tspan>
+        </text>
+      </g>
+      <g id="Graphic_3">
+        <text transform="translate(386 859.776)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".072" y="15">actions</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

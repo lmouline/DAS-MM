@@ -23,6 +23,25 @@ Using our approach, an engineer or a system could try to answer the following qu
 - when the system has decided to connect the production unit, what was the expected network load?
 - yesterday, there was an overload in the district Z, what were the decisions that have modified the network load during all the previous day?
 
+## Step 1: Describing the adaptation process
+
+### Requirements
+
+### Actions
+
+### Context
+
+In [2], Hartmann et al., describe a meta-model that can be seen as the context meta-model. Here, we will show how we can use our approach to define a similar one.
+Here the Hartmann's meta-model:
+
+![](https://raw.githubusercontent.com/thomashartmann/smartgrid-topology-generator/master/lu.snt.smartgrid-topology-generator.model/meta-model.png)
+
+Context meta-model can be seen as a data structure of the collected information about the context (any information relevant for the adaptation process).
+Define at design time, it will be instantiated at runtime.
+Below, you will find the object model that instantiate our  [context meta-model](../../README.md#graphical-version)
+
+### Knowledge
+
 
 ## References
 
