@@ -38,7 +38,7 @@ Here the Hartmann's meta-model:
 
 Context meta-model can be seen as a data structure of the collected information about the context (any information relevant for the adaptation process).
 Define at design time, it will be instantiated at runtime.
-Below, you will find the object model that instantiate our  [context meta-model](../../README.md#graphical-version)
+Below, you will find the object model that instantiate our  [context meta-model](../../../README.md#graphical-version)
 
 ### Knowledge
 
