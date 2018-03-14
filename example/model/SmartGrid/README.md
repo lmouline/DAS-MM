@@ -66,7 +66,7 @@ Tasks.newTask()
 
 **Creation of one structure**:
 
-![](img/context-mm-stucture.svg)
+![](img/context-mm-structure.svg)
 
 Java code:
 ```java
@@ -80,7 +80,7 @@ Tasks.newTask()
 
 **Creation of one attribute and one relation**:
 
-![](img/context-mm-propety.svg)
+![](img/context-mm-property.svg)
 
 Java code:
 ```java
