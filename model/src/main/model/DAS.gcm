@@ -1,6 +1,7 @@
 index Knowledges: Knowledge using name
 index Strategies: Strategy using name
 index Natures: Nature using name
+index Contexts: Context using name
 
 const TYPE_NUMERICAL: String = "Type::Numerical"
 const TYPE_BOOLEAN: String = "Type::Boolean"
@@ -37,6 +38,8 @@ class  Structure {
     rel inner: Structure
     rel properties: Property
     rel values: StructureValue oppositeOf structure
+
+    rel parent: Structure
 }
 
 class StructureValue {
@@ -87,8 +90,15 @@ class Value {
 }
 
 class Source {
-    att srcType: String
-    rel info: Property
+    rel propInfo: Property
+    rel structInfo: Structure
+
+}
+
+class Sensor extends Source {}
+class User extends Source {}
+class Computation extends Source {
+    att expression: String
 }
 
 class Uncertainty {
