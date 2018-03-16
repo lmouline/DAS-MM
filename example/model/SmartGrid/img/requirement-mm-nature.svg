@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-142.5 1274.5 185 63" width="185" height="63">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.7.1 
+    <dc:date>2018-03-15 18:51:06 +0000</dc:date>
+  </metadata>
+  <g id="Requirement" fill-opacity="1" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill="none">
+    <title>Requirement</title>
+    <g id="Requirement: 1-Nature">
+      <title>1-Nature</title>
+      <g id="Group_12">
+        <g id="Graphic_14">
+          <rect x="-141" y="1276" width="182" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(-136 1281.268)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="3.648" y="16">functional: Functional</tspan>
+          </text>
+        </g>
+        <g id="Graphic_13">
+          <rect x="-141" y="1306" width="182" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(-136 1311)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- name: “functional”</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

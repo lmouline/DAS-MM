@@ -26,71 +26,71 @@ public class ContextGen {
     private static final String CURRENT_SRC = "source";
     private static final String CURRENT_UC = "source";
 
-    private final Task STRUCT_GEN = Tasks.newTask()
+    private static final Task STRUCT_GEN = Tasks.newTask()
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "Entity")
-            .setAsVar(ENTITY)
+            .defineAsGlobalVar(ENTITY)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "Concentrator")
             .addVarTo(Structure.PARENT.name, ENTITY)
-            .setAsVar(CONCENTRATOR)
+            .defineAsGlobalVar(CONCENTRATOR)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "CentralSystem")
             .addVarTo(Structure.PARENT.name, ENTITY)
-            .setAsVar(CENTRAL_SYSTEM)
+            .defineAsGlobalVar(CENTRAL_SYSTEM)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "Meter")
             .addVarTo(Structure.PARENT.name, ENTITY)
-            .setAsVar(METER)
+            .defineAsGlobalVar(METER)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "WaterMeter")
             .addVarTo(Structure.PARENT.name, METER)
-            .setAsVar(WATER_METER)
+            .defineAsGlobalVar(WATER_METER)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "GasMeter")
             .addVarTo(Structure.PARENT.name, METER)
-            .setAsVar(GAS_METER)
+            .defineAsGlobalVar(GAS_METER)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "SmartMeter")
             .addVarTo(Structure.PARENT.name, METER)
-            .setAsVar(SMART_METER)
+            .defineAsGlobalVar(SMART_METER)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "Consumption")
-            .setAsVar(CONSUMPTION)
+            .defineAsGlobalVar(CONSUMPTION)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "Location")
-            .setAsVar(LOCATION)
+            .defineAsGlobalVar(LOCATION)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "CommunicationMedia")
-            .setAsVar(COMMUNICATION_MEDIA)
+            .defineAsGlobalVar(COMMUNICATION_MEDIA)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "WirelessCommunicationMedia")
-            .setAsVar(WIRELESS_COMMUNICATION_MEDIA)
+            .defineAsGlobalVar(WIRELESS_COMMUNICATION_MEDIA)
             .addVarTo(Structure.PARENT.name, COMMUNICATION_MEDIA)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "WiredCommunicationMedia")
-            .setAsVar(WIRED_COMMUNICATION_MEDIA)
+            .defineAsGlobalVar(WIRED_COMMUNICATION_MEDIA)
             .addVarTo(Structure.PARENT.name, COMMUNICATION_MEDIA)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "PLC")
-            .setAsVar(PLC)
+            .defineAsGlobalVar(PLC)
             .addVarTo(Structure.PARENT.name, WIRED_COMMUNICATION_MEDIA)
 
             .createTypedNode(Structure.META.name)
             .setAttribute(Structure.NAME.name, Structure.NAME.type, "Customer")
-            .setAsVar(CUSTOMER)
+            .defineAsGlobalVar(CUSTOMER)
 
             .readVar(CONTEXT)
             .addVarTo(Context.STRUCTURES.name, ENTITY)
@@ -108,7 +108,7 @@ public class ContextGen {
             .addVarTo(Context.STRUCTURES.name, PLC)
             .addVarTo(Context.STRUCTURES.name, CUSTOMER);
 
-    private final Task CONSUMPTION_PROP_GEN = Tasks.newTask()
+    private static final Task CONSUMPTION_PROP_GEN = Tasks.newTask()
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "measuringTime")
             .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
@@ -159,7 +159,7 @@ public class ContextGen {
             .readVar(CONSUMPTION)
             .addVarTo(Structure.PROPERTIES.name, CURRENT_PROP);
 
-    private final Task ENTITY_PROP_GEN = Tasks.newTask()
+    private static final Task ENTITY_PROP_GEN = Tasks.newTask()
             .createTypedNode(Relation.META.name)
             .setAttribute(Relation.NAME.name, Relation.NAME.type, "consumptionData")
             .setAttribute(Relation.ISHISTORIC.name, Relation.ISHISTORIC.type, "true")
@@ -179,7 +179,7 @@ public class ContextGen {
             .addVarTo(Structure.PROPERTIES.name, CURRENT_PROP)
             // create source
             .createTypedNode(Sensor.META.name)
-            .addVarTo(Sensor.STRUCTINFO.name, ENTITY)
+            .addVarTo(Sensor.INFORMATION.name, ENTITY)
             .setAsVar(CURRENT_SRC)
             .readVar(CURRENT_PROP)
             .addVarTo(Relation.SOURCE.name, CURRENT_SRC)
@@ -251,7 +251,7 @@ public class ContextGen {
             .addVarTo(Structure.PROPERTIES.name, CURRENT_PROP)
             ;
 
-    private final Task METER_PROP_GEN = Tasks.newTask()
+    private static final Task METER_PROP_GEN = Tasks.newTask()
             .createTypedNode(Relation.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "customer")
             .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
@@ -261,7 +261,7 @@ public class ContextGen {
             .readVar(METER)
             .addVarTo(Structure.PROPERTIES.name, CURRENT_PROP);
 
-    private final Task SMARTMETER_PROP_GEN = Tasks.newTask()
+    private static final Task SMARTMETER_PROP_GEN = Tasks.newTask()
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "isRepeater")
             .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
@@ -332,7 +332,7 @@ public class ContextGen {
             .readVar(SMART_METER)
             .addVarTo(Structure.PROPERTIES.name, CURRENT_PROP);
 
-    private final Task LOCATION_PROP_GEN = Tasks.newTask()
+    private static final Task LOCATION_PROP_GEN = Tasks.newTask()
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "address")
             .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "false")
@@ -363,7 +363,7 @@ public class ContextGen {
             .readVar(LOCATION)
             .addVarTo(Structure.PROPERTIES.name, CURRENT_PROP);
 
-    private final Task COMM_PROP_GEN = Tasks.newTask()
+    private static final Task COMM_PROP_GEN = Tasks.newTask()
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "id")
             .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
@@ -384,7 +384,7 @@ public class ContextGen {
             .readVar(COMMUNICATION_MEDIA)
             .addVarTo(Structure.PROPERTIES.name, CURRENT_PROP);
 
-    private final Task WIRED_COMM_PROP_GEN = Tasks.newTask()
+    private static final Task WIRED_COMM_PROP_GEN = Tasks.newTask()
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "material")
             .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "false")
@@ -434,12 +434,12 @@ public class ContextGen {
             .addVarTo(Structure.PROPERTIES.name, CURRENT_PROP);
 
 
-    public final Task CONTEXT_GEN = Tasks.newTask()
+    public static final Task CONTEXT_GEN = Tasks.newTask()
             .createTypedNode(Context.META.name)
             .setAttribute(Context.NAME.name, Context.NAME.type, "smartGridCtx")
             .setAsVar(CONTEXT)
             .updateIndex(Contexts.META.name)
-            .pipe(STRUCT_GEN, CONSUMPTION_PROP_GEN, ENTITY_PROP_GEN, METER_PROP_GEN, SMARTMETER_PROP_GEN, LOCATION_PROP_GEN, COMM_PROP_GEN)
+            .pipe(STRUCT_GEN, CONSUMPTION_PROP_GEN, ENTITY_PROP_GEN, METER_PROP_GEN, SMARTMETER_PROP_GEN, LOCATION_PROP_GEN, COMM_PROP_GEN, WIRED_COMM_PROP_GEN)
             ;
 
 }

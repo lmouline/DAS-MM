@@ -30,15 +30,16 @@ Using our approach, an engineer or a system could try to answer the following qu
 - when the system has decided to connect the production unit, what was the expected network load?
 - yesterday, there was an overload in the district Z, what were the decisions that have modified the network load during all the previous day?
 
+## Introduction
+
+Our approach can be used both at design time and at run time.
+At design time, we define the different static elements that are implied in adaptation process: the actions, the requirements and the data structure for the context (step 1)
+At run time, we add the values that are related to the executions of the adaptation process: data about executions of actions and data about context information (step 2).
+Based on the model that combine both, we can, at run time, query it to have information about the running adaptation process (step 3).
+
 ## Step 1: Describing the adaptation process at design time
 
-### Requirements
-
-### Actions
-
 ### Context
-
-<!-- ![](img/contextModel.svg) -->
 
 Context meta-model can be seen as a data structure of the collected information about the context (any information relevant for the adaptation process).
 Defined at designed time, the values will be created and/or updated at runtime.
@@ -132,15 +133,261 @@ Tasks.newTask()
   .addVarTo(Relation.UNCERTAINTY.name, CURRENT_UC);
 ```
 
+### Actions
 
+Action meta-model provides a high vision of the different actions possible on the system.
+Actions can be either automatic, from simple API calls to complex scripts, or manual, like the intervention of a technician at a customer place to install a new meter.
+The action meta-model should not describe in details the different actions.
+It can be see as a catalogue of actions.
+Some part of this meta-model can be automatically created by analysing the code of the different actions.
 
+Here we describe an object model that instantiated our [action meta-model](../../README.md#graphical-version) and the Java code.
+The full version of the object model can be found here (**TODO**) and the Java program [here](src/main/java/snt/das/model/example/smartgrid/action/ActionGen.java).
+
+The different actions that we have in our example are:
+
+- reducing the amps of one (or a set of) customer
+- cutting off resource of one (or a set of) customer places
+- modifying/adding/removing a repeater for a smart meter (local action)
+- adding/removing cables
+- modifying cable
+- fixing cable
+
+**Creation of strategies:**
+
+![](img/strategy-mm-strategy.svg)
+
+```java
+Tasks.newTask()
+  .createTypedNode(Strategy.META.name)
+  .setAttribute(Strategy.NAME.name, Strategy.NAME.type, "managingCustomer")
+  .updateIndex(Strategies.META.name)
+  .setAsVar("strategy");
+```
+
+**Creation of tactics:**
+
+![](img/strategy-mm-tactic.svg)
+
+```java
+Tasks.newTask()
+  .createTypedNode(Tactic.META.name)
+  .setAttribute(Tactic.NAME.name, Tactic.NAME.type, "reducingAmps")
+  .setAsVar("tactic")
+  .readVar("strategy")
+  .addVarTo(Strategy.TACTICS.name, "tactic")
+```
+
+**Creation of conditions:**
+
+![](img/strategy-mm-condition.svg)
+
+```java
+Tasks.newTask()
+  .createTypedNode(Condition.META.name)
+  .setAsVar("condition")
+  .readVar("tactic")
+  .addVarTo(Tactic.CONDITION.name, "condition")
+  .readIndex(Contexts.META.name)
+  .traverse(Context.STRUCTURES.name)
+  .setAsVar("allStructures")
+  .select((Node node, TaskContext ctx) -> ((Structure)node).getName().equals("Customer"))
+  .setAsVar("input")
+  .readVar("condition")
+  .addVarTo(Condition.INPUT.name, "input")
+  .readVar("allStructures")
+  .select((Node node, TaskContext ctx) -> ((Structure)node).getName().equals("Meter"))
+  .setAsVar("input")
+  .readVar("condition")
+  .addVarTo(Condition.INPUT.name, "input");
+```
+
+**Creation of actions:**
+
+![](img/strategy-mm-actions0.svg)
+
+```java
+Tasks.newTask()
+  .createTypedNode(Action.META.name)
+  .setAttribute(Action.NAME.name, Action.NAME.type, "askReduce")
+  .setAsVar("action")
+  .readVar("tactic")
+  .addVarTo(Tactic.ACTIONS.name,"action")
+  .createTypedNode(Action.META.name)
+  .setAttribute(Action.NAME.name, Action.NAME.type, "checkNewLimit")
+  .setAsVar("action")
+  .readVar("tactic")
+  .addVarTo(Tactic.ACTIONS.name,"action")
+  .createTypedNode(Action.META.name)
+  .setAttribute(Action.NAME.name, Action.NAME.type, "notifyUser")
+  .setAsVar("action")
+  .readVar("tactic")
+  .addVarTo(Tactic.ACTIONS.name,"action")
+  .readVar("allStructures")
+  .select((Node node, TaskContext ctx) -> ((Structure)node).getName().equals("Consumption"))
+  .setAsVar("impact")
+  .readVar("action")
+  .addVarTo(Action.IMPACTED.name,"impact")
+  .readVar("allStructures")
+  .select((Node node, TaskContext ctx) -> ((Structure)node).getName().equals("Meter"))
+  .setAsVar("impact")
+  .readVar("action")
+  .addVarTo(Action.IMPACTED.name,"impact");
+```
+
+### Requirements
+
+Requirement meta-model allow to abstract the different goals of the system.
+
+**Creation of natures:**
+
+![](img/requirement-mm-nature.svg)
+
+```java
+Tasks.newTask()
+  .createTypedNode(Functional.META.name)
+  .setAttribute(Functional.NAME.name, Functional.NAME.type, "functional")
+  .defineAsGlobalVar("functional")
+  .updateIndex(Natures.META.name);
+```
+
+**Creation of a requirement:**
+
+![](img/requirement-mm-requirement.svg)
+
+```java
+Tasks.newTask()
+  .createTypedNode(Requirement.META.name)
+  .setAttribute(Requirement.NAME.name, Requirement.NAME.type, "balance")
+  .updateIndex(Requirements.META.name)
+  .setAsVar("requirement");
+```
+
+**Creation of goals:**
+
+![](img/requirement-mm-goals.svg)
+
+```java
+Tasks.newTask()
+  .createTypedNode(Goal.META.name)
+  .setAttribute(Goal.GOAL.name, Goal.GOAL.type, "The system shall not have a cable in overload")
+  .setAsVar("goal")
+  .addVarTo(Goal.NATURE.name, "quality")
+  .readVar("requirement")
+  .addVarTo(Requirement.GOALS.name, "goal")
+
+  .createTypedNode(Goal.META.name)
+  .setAttribute(Goal.GOAL.name, Goal.GOAL.type, "The system shall provide enough resources for the current consumption")
+  .setAsVar("goal")
+  .addVarTo(Goal.NATURE.name, "performance")
+  .readVar("requirement")
+  .addVarTo(Requirement.GOALS.name, "goal")
+
+  .createTypedNode(Goal.META.name)
+  .setAttribute(Goal.GOAL.name, Goal.GOAL.type, "The system shall not loss resources")
+  .setAsVar("goal")
+  .addVarTo(Goal.NATURE.name, "performance")
+  .readVar("requirement")
+  .addVarTo(Requirement.GOALS.name, "goal");
+```
 
 
 ### Knowledge
 
+Knowledge meta-model allow to link the different elements implied in adaptation processes.
+At design time, it can be seen as the root element of the model.
+Its usage will be more important at runtime.
+
+Here we describe an object model that instantiated our [action meta-model](../../README.md#graphical-version) and the Java code.
+The full version of the object model can be found here (**TODO**) and the Java program [here](src/main/java/snt/das/model/example/smartgrid/action/ActionGen.java).
+
+![](img/knowledge-mm-all.svg)
+
+```java
+Tasks.newTask()
+  .createTypedNode(Knowledge.META.name)
+  .setAttribute(Knowledge.NAME.name, Knowledge.NAME.type, "SmartGridKnowledge")
+  .updateIndex(Knowledges.META.name)
+  .setAsVar("Knowledge")
+  .readIndex(Contexts.META.name)
+  .setAsVar("Contexts")
+  .readIndex(Strategies.META.name)
+  .setAsVar("Strategies")
+  .readIndex(Requirements.META.name)
+  .setAsVar("Requirements")
+  .readVar("Knowledge")
+  .addVarTo(Knowledge.CONTEXT.name, "Contexts")
+  .addVarTo(Knowledge.STRATEGIES.name, "Strategies")
+  .addVarTo(Knowledge.REQUIREMENTS.name, "Requirements");
+```
+
+
 ## Step 2: Creating procedure to update the model with logging values at runtime
 
+The second step consist in adding run time values about context modifications, action executions and decisions.
+
+### Context
+
+Here, we wll show how to set consumption data in the context model:
+
+![](img/context-om-values.svg)
+
+### Actions
+
+Let's imagine that the adaptation process decided to reduce the amps of two uses.
+It will thus execute the `reducingAmps` for the two customers, in parallel.
+The action sequence will look like:
+
+![](img/strategy-execution.svg)
+
+In our solution, this will be represented as depicted in the following figure:
+
+![](img/strategy-om-execution.svg)
+
+### Knowledge
+
+In this section, we show you how to model a decision that has been taken by the adaptation process.
+
+![](img/knowledge-om-decision)
+
 ## Step 3: Query the model to diagnose a self adaptive system at runtime
+
+Based on the model presented above, an engineer will query it in order to diagnose the root cause of a suboptimal configuration.
+
+Here a implementation of the first query: **What goal(s) the system was trying to reach by executing a tactic?** (Complete version [here](src/main/java/snt/das/model/example/smartgrid/diagnosisAlgo/GetGoals))
+
+```java
+Tasks.newTask()
+  .inject(tactics)
+  .addToVar("tactics")
+  .inject(times)
+  .addToVar("times")
+  .readVar("tactics")
+  .forEach(Tasks.newTask()
+    .thenDo((TaskContext ctx) -> {
+      Tactic tactic = (Tactic) ctx.result().get(0);
+      int idx = ctx.intVar("i");
+      TaskResult times = ctx.variable("times");
+      long time = (long) times.get(idx - 1);
+
+      tactic.travelInTime(time, (Node n) -> {
+        Tactic casted = (Tactic) n;
+        ctx.addToGlobalVariable("timedTactics",casted);
+        ctx.continueTask();
+      });
+    })
+  )
+  .readVar("timedTactics")
+  .traverse(Tactic.CONDITION.name)
+  .traverse(Condition.IMPLEMENT.name)
+  .addToVar("goals");
+```
+
+
+## TODO
+
+- [ ] GreyCat Inspector with the values
+- [ ] Web view with object model
 
 
 ## References

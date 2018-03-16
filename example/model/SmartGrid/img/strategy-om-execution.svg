@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="469.4399 307.5 1195.1577 925" width="1195.1577" height="925">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledDiamond_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-5 -3 6 6" markerWidth="6" markerHeight="6" color="#b1001c">
+      <g>
+        <path d="M -3.7333333 0 L -1.8666667 1.4 L 0 0 L -1.8666667 -1.4 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledDiamond_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-5 -3 6 6" markerWidth="6" markerHeight="6" color="#b1001c">
+      <g>
+        <path d="M -3.7333333 0 L -1.8666667 1.4 L 0 0 L -1.8666667 -1.4 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="Diamond_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-5 -3 6 6" markerWidth="6" markerHeight="6" color="#b1001c">
+      <g>
+        <path d="M -3.7333333 0 L -1.8666667 1.4 L 0 0 L -1.8666667 -1.4 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.7.1 
+    <dc:date>2018-03-16 10:37:19 +0000</dc:date>
+  </metadata>
+  <g id="Action-Exec-Obj-M" fill-opacity="1" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill="none">
+    <title>Action-Exec-Obj-M</title>
+    <g id="Action-Exec-Obj-M: Layer 1">
+      <title>Layer 1</title>
+      <g id="Group_27">
+        <g id="Graphic_29">
+          <rect x="1374" y="740.9999" width="172" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(1379 746.2678)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="9.304" y="16">askReduce: Action</tspan>
+          </text>
+        </g>
+        <g id="Graphic_28">
+          <rect x="1374" y="770.9999" width="172" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(1379 775.9999)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">-name: “askReduce”</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_24">
+        <g id="Graphic_26">
+          <rect x="1326" y="850.9999" width="206.5" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(1331 856.2678)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="10.138" y="16">checkNewLimit: Action</tspan>
+          </text>
+        </g>
+        <g id="Graphic_25">
+          <rect x="1326" y="880.9999" width="206.5" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(1331 885.9999)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">-name: “checkNewLimit”</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_21">
+        <g id="Graphic_23">
+          <rect x="1423" y="988.9999" width="172" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(1428 994.2678)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="12.712" y="16">notifyUser: Action</tspan>
+          </text>
+        </g>
+        <g id="Graphic_22">
+          <rect x="1423" y="1018.9999" width="172" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(1428 1023.9999)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">-name: “notifyUser”</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Line_20">
+        <path d="M 1135.1998 323.29583 L 1460.5347 321.63815 L 1460.0194 740.2499" marker-start="url(#FilledDiamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_19">
+        <path d="M 1460.5347 321.63815 L 1661.878 320.2805 L 1660.6585 894.6707 L 1533.25 895.4025" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_18">
+        <path d="M 1660.6585 894.6707 L 1663.0976 1004.4268 L 1595.75 1004.2402" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Group_15">
+        <g id="Graphic_17">
+          <rect x="873.5" y="309" width="247" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(878.5 314.26794)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="36.004" y="16">reducingAmps: Tactic</tspan>
+          </text>
+        </g>
+        <g id="Graphic_16">
+          <rect x="873.5" y="339" width="247" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(878.5 344.26794)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- name: “reducingAmps”</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_30">
+        <g id="Graphic_32">
+          <rect x="565" y="654" width="219" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(570 659.26794)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="16.956" y="16">exec1: TacticExecution</tspan>
+          </text>
+        </g>
+        <g id="Graphic_31">
+          <rect x="565" y="684" width="219" height="56" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(570 689.0359)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- status: “SUCCEED”</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="35.46411">- startTime: t</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="42.46411">0</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_33">
+        <g id="Graphic_35">
+          <rect x="541.5" y="1048" width="266" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(546.5 1053.268)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="40.456" y="16">exec2: TacticExecution</tspan>
+          </text>
+        </g>
+        <g id="Graphic_34">
+          <rect x="541.5" y="1078" width="266" height="56" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(546.5 1083.0359)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- status: “SUCCEED”</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="35.46411">- startTime: t</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="42.46411">0</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_39">
+        <g id="Graphic_41">
+          <rect x="861" y="654" width="272" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(866 659.26794)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x=".52" y="16">checkNewLimit1: ActionExecution</tspan>
+          </text>
+        </g>
+        <g id="Graphic_40">
+          <rect x="861" y="684" width="272" height="56" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(866 689.0359)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- status: “IDLE”</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="35.46411">- startTime: t</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="42.46411">2</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_42">
+        <g id="Graphic_44">
+          <rect x="864" y="530" width="252" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(869 535.26794)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="6.936" y="16">askReduce1: ActionExecution</tspan>
+          </text>
+        </g>
+        <g id="Graphic_43">
+          <rect x="864" y="560" width="252" height="83" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(869 565.3038)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- status: “SUCCEED”</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="35.46411">- startTime: t</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="42.46411">0</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="61.92822">- modificationTime: [t</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="68.92822">2</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="61.92822">]</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_45">
+        <g id="Graphic_47">
+          <rect x="864" y="751" width="252" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(869 756.2679)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="10.344" y="16">notifyUser1: ActionExecution</tspan>
+          </text>
+        </g>
+        <g id="Graphic_46">
+          <rect x="864" y="781" width="252" height="56" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(869 786.0359)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- status: “IDLE”</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="35.46411">- startTime: t</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="42.46411">0</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Line_48">
+        <path d="M 796.7857 660.349 L 861 622.7195 L 863.25 622.3494" marker-start="url(#FilledDiamond_Marker_2)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_49">
+        <line x1="798.7" y1="712" x2="860.25" y2="712" marker-start="url(#FilledDiamond_Marker_2)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_50">
+        <path d="M 797.9217 738.4813 L 861 766.62195 L 863.25 766.6111" marker-start="url(#FilledDiamond_Marker_2)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Group_57">
+        <g id="Graphic_59">
+          <rect x="854" y="1048" width="272" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(859 1053.268)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x=".52" y="16">checkNewLimit1: ActionExecution</tspan>
+          </text>
+        </g>
+        <g id="Graphic_58">
+          <rect x="854" y="1078" width="272" height="56" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(859 1083.0359)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- status: “RUNNING”</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="35.46411">- startTime: t</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="42.46411">1</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_54">
+        <g id="Graphic_56">
+          <rect x="857" y="924" width="252" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(862 929.2679)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="6.936" y="16">askReduce2: ActionExecution</tspan>
+          </text>
+        </g>
+        <g id="Graphic_55">
+          <rect x="857" y="954" width="252" height="83" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(862 959.3038)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- status: “SUCCEED”</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="35.46411">- startTime: t</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="42.46411">0</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="61.92822">- modificationTime: [t</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="68.92822">1</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="61.92822">]</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_51">
+        <g id="Graphic_53">
+          <rect x="857" y="1145" width="252" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(862 1150.268)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="10.344" y="16">notifyUser1: ActionExecution</tspan>
+          </text>
+        </g>
+        <g id="Graphic_52">
+          <rect x="857" y="1175" width="252" height="56" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(862 1180.0359)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- status: “RUNNING”</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="35.46411">- startTime: t</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="42.46411">1</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Line_60">
+        <line x1="818.944" y1="1054.597" x2="856.25" y2="1023.3477" marker-start="url(#FilledDiamond_Marker_2)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_61">
+        <line x1="822.2" y1="1106" x2="853.25" y2="1106" marker-start="url(#FilledDiamond_Marker_2)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_62">
+        <line x1="820.1278" y1="1137.8143" x2="856.25" y2="1160.0625" marker-start="url(#FilledDiamond_Marker_2)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_63">
+        <path d="M 1431.1944 731.1344 L 1280.1707 600.7683 L 1116.75 601.1804" marker-start="url(#Diamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_64">
+        <path d="M 1403.0153 840.5334 L 1272.8537 714.1829 L 1133.75 713.08215" marker-start="url(#Diamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_65">
+        <line x1="1454.022" y1="983.3434" x2="1066.5193" y2="837.75" marker-start="url(#Diamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_66">
+        <path d="M 1509.0776 1063.6998 L 1509.439 1201.9878 L 1109.75 1202.7563" marker-start="url(#Diamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_67">
+        <path d="M 1401.0544 921.006 L 1373.0554 945.8378 C 1368.079 940.2266 1356.8567 950.1795 1361.8331 955.7907 L 1242.3659 1061.7439 L 1126.75 1062.3194" marker-start="url(#Diamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_68">
+        <path d="M 1359.3 786.0102 L 1354.3489 786.0108 C 1354.3481 778.5108 1339.3481 778.5123 1339.3489 786.0123 L 1220.0621 786.0246 L 1119.2015 851.1096 C 1115.135 844.8078 1102.5313 852.9409 1106.5978 859.2427 L 1007.4074 923.25" marker-start="url(#Diamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_69">
+        <path d="M 858.8 324 L 679.3446 324 L 674.7212 653.25" marker-start="url(#FilledDiamond_Marker_2)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_70">
+        <path d="M 679.3446 324 L 470.9399 324 L 470.9399 1101.0644 L 540.75 1102.757" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+</svg>

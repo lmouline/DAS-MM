@@ -35,6 +35,18 @@
             <artifactId>model</artifactId>
             <version>${das.model}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.datathings</groupId>
+            <artifactId>greycat-websocket</artifactId>
+            <version>10.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.datathings</groupId>
+            <artifactId>greycat-rocksdb</artifactId>
+            <version>10.8</version>
+        </dependency>
     </dependencies>
 
 
@@ -65,6 +77,10 @@
             <releases>
                 <enabled>false</enabled>
             </releases>
+        </repository>
+        <repository>
+            <id>datathings.public</id>
+            <url>https://registry.datathings.com/repository/public/</url>
         </repository>
     </repositories>
 

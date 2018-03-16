@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="429.5 564 405 181.5" width="405" height="181.5">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledDiamond_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-5 -3 6 6" markerWidth="6" markerHeight="6" color="#b1001c">
+      <g>
+        <path d="M -3.7333333 0 L -1.8666667 1.4 L 0 0 L -1.8666667 -1.4 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.7.1 
+    <dc:date>2018-03-15 14:46:25 +0000</dc:date>
+  </metadata>
+  <g id="Action" fill-opacity="1" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill="none">
+    <title>Action</title>
+    <g id="Action: 1-Tactic">
+      <title>1-Tactic</title>
+      <g id="Group_19">
+        <g id="Graphic_21">
+          <rect x="431" y="684" width="247" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(436 689.26794)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="36.004" y="16">reducingAmps: Tactic</tspan>
+          </text>
+        </g>
+        <g id="Graphic_20">
+          <rect x="431" y="714" width="247" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(436 719.26794)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- name: “reducingAmps”</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Line_25">
+        <line x1="669.80086" y1="633.1669" x2="582.08475" y2="683.25" marker-start="url(#FilledDiamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+    </g>
+    <g id="Action: 1-Strategies">
+      <title>1-Strategies</title>
+      <g id="Group_10">
+        <g id="Graphic_12">
+          <rect x="586" y="565.5" width="247" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(591 570.76794)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="6.508" y="16">managingCustomer: Strategy</tspan>
+          </text>
+        </g>
+        <g id="Graphic_11">
+          <rect x="586" y="595.5" width="247" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(591 600.76794)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- name: “managingCustomer”</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

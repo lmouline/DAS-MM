@@ -1,6 +1,7 @@
 index Knowledges: Knowledge using name
 index Strategies: Strategy using name
 index Natures: Nature using name
+index Requirements: Requirement using name
 index Contexts: Context using name
 
 const TYPE_NUMERICAL: String = "Type::Numerical"
@@ -32,7 +33,9 @@ class Context {
     rel structures: Structure
 }
 
-class  Structure {
+class Information{}
+
+class  Structure extends Information {
     att name: String
 
     rel inner: Structure
@@ -47,7 +50,7 @@ class StructureValue {
     rel values: Value
 }
 
-class Property {
+class Property extends Information {
     att name: String
     att isHistoric: Boolean
     att isStatic: Boolean
@@ -90,9 +93,7 @@ class Value {
 }
 
 class Source {
-    rel propInfo: Property
-    rel structInfo: Structure
-
+    rel information: Information
 }
 
 class Sensor extends Source {}
@@ -121,19 +122,30 @@ class Tactic {
 
     rel isExecutedBy: Decision oppositeOf execute
 
+    ref executions: TacticExecution
 }
 
 class Condition {
     rel implement: Goal oppositeOf isImplementedBy
-    rel input: Property
+    rel input: Information
 }
 
 class Action {
     att name: String
-    att status: String
 
-    rel impacted: Value
+    rel impacted: Information
     ref tactic: Tactic oppositeOf actions
+
+    ref executions: ActionExecution
+}
+
+class Execution {
+  att status: String
+}
+
+class ActionExecution {}
+class TacticExecution {
+    rel actionsExec: ActionExecution
 }
 
 
