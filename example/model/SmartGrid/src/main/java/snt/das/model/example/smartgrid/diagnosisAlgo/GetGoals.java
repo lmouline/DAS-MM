@@ -10,6 +10,7 @@ public class GetGoals {
     private static final String TACTICS = "tactics";
     private static final String TIMED_TACTICS = "timedTactics";
     private static final String TIMES = "injectedTimes";
+    private static final String TARGET_TIME = "timeToTravel";
     private static final String GOALS = "goals";
 
 
@@ -17,17 +18,15 @@ public class GetGoals {
             .readVar(TACTICS)
             .forEach(Tasks.newTask()
                     .thenDo((TaskContext ctx) -> {
-                        Tactic tactic = (Tactic) ctx.result().get(0);
-                        int idx = ctx.intVar("i");
                         TaskResult times = ctx.variable(TIMES);
+                        int idx = ctx.intVar("i");
                         long time = (long) times.get(idx - 1);
 
-                        tactic.travelInTime(time, (Node n) -> {
-                            Tactic casted = (Tactic) n;
-                            ctx.addToGlobalVariable(TIMED_TACTICS,casted);
-                            ctx.continueTask();
-                        });
+                        ctx.setVariable(TARGET_TIME, time);
+
+                        ctx.continueTask();
                     })
+                    .travelInTime("{{" + TIMED_TACTICS + "}}")
             )
             .readVar(TIMED_TACTICS)
             .traverse(Tactic.CONDITION.name)

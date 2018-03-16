@@ -365,17 +365,15 @@ Tasks.newTask()
   .readVar("tactics")
   .forEach(Tasks.newTask()
     .thenDo((TaskContext ctx) -> {
-      Tactic tactic = (Tactic) ctx.result().get(0);
+      TaskResult times = ctx.variable(TIMES);
       int idx = ctx.intVar("i");
-      TaskResult times = ctx.variable("times");
       long time = (long) times.get(idx - 1);
 
-      tactic.travelInTime(time, (Node n) -> {
-        Tactic casted = (Tactic) n;
-        ctx.addToGlobalVariable("timedTactics",casted);
-        ctx.continueTask();
-      });
+      ctx.setVariable(TARGET_TIME, time);
+    
+      ctx.continueTask();
     })
+    .travelInTime("{{" + TIMED_TACTICS + "}}")
   )
   .readVar("timedTactics")
   .traverse(Tactic.CONDITION.name)
