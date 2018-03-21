@@ -1,11 +1,11 @@
 Model Example: SmartGrid at Luxembourg
 --------------------------------------
 
-To allow interactive diagnosis of adaptive systems, we developed a model-based solution.
+To allow interactive diagnosis of adaptive systems, we developed a model-based solution *Amine:* **How? By tracing ... (just a small sentence)**.
 In this example, we will describe how to use our solution on a smart grid system.
 We will first describe a smart grid example, then the different steps that engineers will have to do to use our approach.
 As this approach is a Model-Driven Engineering (MDE), using our approach mainly means instantiating the proposed meta-model.
-**Disclaimer:** We have not developed any specific language to instantiate easily our meta-model. To do so, an engineer will have to use our basic Java or javascript API.
+**Disclaimer:** We have not developed any specific language to instantiate easily our meta-model. To do so, an engineer will have to use our basic Java or javascript API. *Amine:* **Rather, you should say that this is left for future work!**
 To show how to instantiate our meta-model, we describe both an object model and a Java code. The complete object model can be seen here (**TODO**) and the Java code [here](src/main/java).
 
 ## Description of the example
@@ -33,9 +33,9 @@ Using our approach, an engineer or a system could try to answer the following qu
 ## Introduction
 
 Our approach can be used both at design time and at run time.
-At design time, we define the different static elements that are implied in adaptation process: the actions, the requirements and the data structure for the context (step 1)
+At design time, we define the different <s>static</s> elements that are implied in an adaptation process: the actions, the requirements and the data structure for the context (step 1).
 At run time, we add the values that are related to the executions of the adaptation process: data about executions of actions and data about context information (step 2).
-Based on the model that combine both, we can, at run time, query it to have information about the running adaptation process (step 3).
+Based on the model that combines both, we can, at run time, query it to have information about the running adaptation process (step 3).
 
 ## Step 1: Describing the adaptation process at design time
 
@@ -43,14 +43,14 @@ Based on the model that combine both, we can, at run time, query it to have info
 
 Context meta-model can be seen as a data structure of the collected information about the context (any information relevant for the adaptation process).
 Defined at designed time, the values will be created and/or updated at runtime.
-Here, we described an object model that instantiated our [context meta-model](../../README.md#graphical-version) and the Java code.
+Here, we describe an object model that instantiates our [context meta-model](../../README.md#graphical-version) and the corresponding Java code.
 The full version of the object model can be found here (**TODO**) and the Java program [here](src/main/java/snt/das/model/example/smartgrid/context/ContextGen.java).
 The presented object model has been built in accordance with the one described by Hartmann et al. in [2].
 Here the presented meta-model by Hartmann et al. in [2]:
 
 ![](https://raw.githubusercontent.com/thomashartmann/smartgrid-topology-generator/master/lu.snt.smartgrid-topology-generator.model/meta-model.png)
 
-In this document, we will depicted how to create: the context, one structure (entity), one of its attribute, [...] (**TODO**)
+In this document, we will depict how to create: the context, one structure (entity), one of its attributes, [...] (**TODO**).
 
 **Creation of the context**:
 
@@ -135,19 +135,19 @@ Tasks.newTask()
 
 ### Actions
 
-Action meta-model provides a high vision of the different actions possible on the system.
-Actions can be either automatic, from simple API calls to complex scripts, or manual, like the intervention of a technician at a customer place to install a new meter.
+The Action meta-model provides a high vision of the different possible actions <s>possible on the system</s>.
+Actions can be either automatic (e.g., simple API, scripts, etc.)  or manual (e.g. the intervention of a technician <s>at a customer place</s> to install a new meter).
 The action meta-model should not describe in details the different actions.
-It can be see as a catalogue of actions.
-Some part of this meta-model can be automatically created by analysing the code of the different actions.
+It can be see as a catalog of actions.
+Some parts of this meta-model can be automatically created by analysing the code of the different actions. *Amine* **should be more precise! Otherwise omit this sentence**
 
-Here we describe an object model that instantiated our [action meta-model](../../README.md#graphical-version) and the Java code.
+Here we describe an object model that instantiates our [action meta-model](../../README.md#graphical-version) and the Java code.
 The full version of the object model can be found here (**TODO**) and the Java program [here](src/main/java/snt/das/model/example/smartgrid/action/ActionGen.java).
 
 The different actions that we have in our example are:
 
-- reducing the amps of one (or a set of) customer
-- cutting off resource of one (or a set of) customer places
+- reducing the amps of one or several customers
+- cutting off resource of one or several customer places
 - modifying/adding/removing a repeater for a smart meter (local action)
 - adding/removing cables
 - modifying cable
@@ -237,7 +237,7 @@ Tasks.newTask()
 
 ### Requirements
 
-Requirement meta-model allow to abstract the different goals of the system.
+Requirement meta-model allows to abstract the different goals of the system.
 
 **Creation of natures:**
 
@@ -294,11 +294,11 @@ Tasks.newTask()
 
 ### Knowledge
 
-Knowledge meta-model allow to link the different elements implied in adaptation processes.
+Knowledge meta-model allows to link the different elements implied in adaptation processes.
 At design time, it can be seen as the root element of the model.
-Its usage will be more important at runtime.
+Its usage will be more important at runtime. *Amine* **The previous remark stands here as well**
 
-Here we describe an object model that instantiated our [action meta-model](../../README.md#graphical-version) and the Java code.
+Here we describe an object model that instantiates our [action meta-model](../../README.md#graphical-version) and the Java code.
 The full version of the object model can be found here (**TODO**) and the Java program [here](src/main/java/snt/das/model/example/smartgrid/action/ActionGen.java).
 
 ![](img/knowledge-mm-all.svg)
@@ -324,7 +324,7 @@ Tasks.newTask()
 
 ## Step 2: Creating procedure to update the model with logging values at runtime
 
-The second step consist in adding run time values about context modifications, action executions and decisions.
+The second step consists in adding run time values about context modifications, action executions and decisions.
 
 ### Context
 
