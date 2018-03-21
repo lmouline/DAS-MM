@@ -204,7 +204,7 @@ Tasks.newTask()
 
 **Creation of actions:**
 
-![](img/strategy-mm-actions0.svg)
+![](img/strategy-mm-actions.svg)
 
 ```java
 Tasks.newTask()
@@ -370,7 +370,7 @@ Tasks.newTask()
       long time = (long) times.get(idx - 1);
 
       ctx.setVariable(TARGET_TIME, time);
-    
+
       ctx.continueTask();
     })
     .travelInTime("{{" + TIMED_TACTICS + "}}")

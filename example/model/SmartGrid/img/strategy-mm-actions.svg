@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="159.25 564 901.25 443.5" width="901.25" height="443.5">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-44.5 483.5 2625 542.5" width="2625" height="542.5">
   <defs>
     <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
       <font-face-src>
@@ -12,6 +12,11 @@
         <path d="M -3.7333333 0 L -1.8666667 1.4 L 0 0 L -1.8666667 -1.4 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
       </g>
     </marker>
+    <font-face font-family="Helvetica Neue" font-size="12" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
     <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="StickArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -3 6 6" markerWidth="6" markerHeight="6" color="#b1001c">
       <g>
         <path d="M 3.7333333 0 L 0 0 M 0 -1.4 L 3.7333333 0 L 0 1.4" fill="none" stroke="currentColor" stroke-width="1"/>
@@ -19,147 +24,230 @@
     </marker>
   </defs>
   <metadata> Produced by OmniGraffle 7.7.1 
-    <dc:date>2018-03-15 14:47:18 +0000</dc:date>
+    <dc:date>2018-03-21 16:18:15 +0000</dc:date>
   </metadata>
   <g id="Action" fill-opacity="1" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill="none">
     <title>Action</title>
     <g id="Action: 1-Actions">
       <title>1-Actions</title>
-      <g id="Group_213">
-        <g id="Graphic_215">
-          <rect x="200" y="620" width="172" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <text transform="translate(205 625.26794)" fill="#b1001c">
+      <g id="Group_131">
+        <g id="Graphic_133">
+          <rect x="171" y="601" width="172" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(176 606.26794)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="9.304" y="16">askReduce: Action</tspan>
           </text>
         </g>
-        <g id="Graphic_214">
-          <rect x="200" y="650" width="172" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <text transform="translate(205 655)" fill="#b1001c">
-            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">-name: “</tspan>
-            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="16">askReduce</tspan>
-            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" y="16">”</tspan>
+        <g id="Graphic_132">
+          <rect x="171" y="631" width="172" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(176 636)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">-name: “askReduce”</tspan>
           </text>
         </g>
       </g>
-      <g id="Group_216">
-        <g id="Graphic_218">
-          <rect x="160.75" y="725" width="206.5" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <text transform="translate(165.75 730.26794)" fill="#b1001c">
+      <g id="Group_128">
+        <g id="Graphic_130">
+          <rect x="123" y="711" width="206.5" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(128 716.26794)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="10.138" y="16">checkNewLimit: Action</tspan>
           </text>
         </g>
-        <g id="Graphic_217">
-          <rect x="160.75" y="755" width="206.5" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <text transform="translate(165.75 760)" fill="#b1001c">
+        <g id="Graphic_129">
+          <rect x="123" y="741" width="206.5" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(128 746)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">-name: “checkNewLimit”</tspan>
           </text>
         </g>
       </g>
-      <g id="Group_219">
-        <g id="Graphic_221">
+      <g id="Group_125">
+        <g id="Graphic_127">
           <rect x="220" y="849" width="172" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
           <text transform="translate(225 854.2679)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="12.712" y="16">notifyUser: Action</tspan>
           </text>
         </g>
-        <g id="Graphic_220">
+        <g id="Graphic_126">
           <rect x="220" y="879" width="172" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
           <text transform="translate(225 884)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">-name: “notifyUser”</tspan>
           </text>
         </g>
       </g>
-      <g id="Line_222">
-        <line x1="416.8418" y1="681.5684" x2="372.75" y2="675.9851" marker-start="url(#FilledDiamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <g id="Line_124">
+        <line x1="452.3582" y1="680.8033" x2="343.61426" y2="661.43044" marker-start="url(#FilledDiamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
       </g>
-      <g id="Line_223">
-        <line x1="429.0924" y1="746.6995" x2="368" y2="755.3219" marker-start="url(#FilledDiamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <g id="Line_123">
+        <line x1="416.34695" y1="740.3637" x2="330.25" y2="747.44554" marker-start="url(#FilledDiamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
       </g>
-      <g id="Line_224">
+      <g id="Line_122">
         <line x1="513.2504" y1="751.4092" x2="334.99167" y2="848.25" marker-start="url(#FilledDiamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Graphic_121">
+        <text transform="translate(535 663.32596)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".174" y="12">tactics</tspan>
+        </text>
+      </g>
+      <g id="Graphic_120">
+        <text transform="translate(686 635.32596)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".052" y="12">strategy</tspan>
+        </text>
+      </g>
+      <g id="Graphic_119">
+        <text transform="translate(320.25 666.32596)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".006" y="12">actions</tspan>
+        </text>
+      </g>
+      <g id="Graphic_118">
+        <text transform="translate(296 828.326)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".006" y="12">actions</tspan>
+        </text>
+      </g>
+      <g id="Graphic_117">
+        <text transform="translate(339 750.326)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".006" y="12">actions</tspan>
+        </text>
+      </g>
+      <g id="Graphic_116">
+        <text transform="translate(436 655.32596)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".396" y="12">tactic</tspan>
+        </text>
+      </g>
+      <g id="Graphic_115">
+        <text transform="translate(383 716.326)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".396" y="12">tactic</tspan>
+        </text>
+      </g>
+      <g id="Graphic_114">
+        <text transform="translate(451 749.326)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".396" y="12">tactic</tspan>
+        </text>
+      </g>
+      <g id="Graphic_113">
+        <text transform="translate(564 768.326)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".234" y="12">condition</tspan>
+        </text>
+      </g>
+      <g id="Graphic_112">
+        <text transform="translate(695 933.326)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".058" y="12">input</tspan>
+        </text>
+      </g>
+      <g id="Graphic_111">
+        <text transform="translate(507 933.326)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".058" y="12">input</tspan>
+        </text>
+      </g>
+      <g id="Line_107">
+        <path d="M 170.25 646 L 19.688406 646 L 19.688406 1001.6812 L 355.8503 999.6685" marker-end="url(#StickArrow_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Group_104">
+        <g id="Graphic_106">
+          <rect x="-43" y="485" width="195.80915" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(-38 490.26794)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="1.6325764" y="16">Consumption: Structure</tspan>
+          </text>
+        </g>
+        <g id="Graphic_105">
+          <rect x="-43" y="515" width="195.80915" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(-38 520.26794)" fill="#b1001c">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- name: “Consumption”</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Line_103">
+        <line x1="219.98834" y1="600.25" x2="106.54665" y2="551.97585" marker-end="url(#StickArrow_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Graphic_102">
+        <text transform="translate(37.5 555.32596)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".24" y="12">impacted</tspan>
+        </text>
+      </g>
+      <g id="Graphic_101">
+        <text transform="translate(304 1005.326)" fill="#b1001c">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#b1001c" x=".24" y="12">impacted</tspan>
+        </text>
       </g>
     </g>
     <g id="Action: 1-Condition">
       <title>1-Condition</title>
-      <g id="Group_144">
-        <g id="Graphic_146">
-          <rect x="494.5" y="789" width="120" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <g id="Group_53">
+        <g id="Graphic_55">
+          <rect x="494.5" y="789" width="141.5" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
           <text transform="translate(499.5 794.2679)" fill="#b1001c">
-            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="4.336" y="16">cond1: Tactic</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x=".718" y="16">cond1: Condition</tspan>
           </text>
         </g>
-        <g id="Graphic_145">
-          <rect x="494.5" y="819" width="120" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        <g id="Graphic_54">
+          <rect x="494.5" y="819" width="141.5" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
         </g>
       </g>
-      <g id="Line_171">
-        <line x1="554.5" y1="758.7" x2="554.5" y2="772.35" marker-end="url(#StickArrow_Marker)" marker-start="url(#FilledDiamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <g id="Line_52">
+        <line x1="558.7368" y1="758.5589" x2="560.73656" y2="772.5109" marker-end="url(#StickArrow_Marker)" marker-start="url(#FilledDiamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
       </g>
-      <g id="Group_187">
-        <g id="Graphic_189">
-          <rect x="869" y="946" width="190" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <text transform="translate(874 951.268)" fill="#b1001c">
+      <g id="Group_49">
+        <g id="Graphic_51">
+          <rect x="372.5" y="954" width="190" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(377.5 959.268)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="27.608" y="16">Meter: Structure</tspan>
           </text>
         </g>
-        <g id="Graphic_188">
-          <rect x="869" y="976" width="190" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <text transform="translate(874 981.268)" fill="#b1001c">
+        <g id="Graphic_50">
+          <rect x="372.5" y="984" width="190" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(377.5 989.268)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- name: “Meter”</tspan>
           </text>
         </g>
       </g>
-      <g id="Line_190">
-        <line x1="605.28445" y1="849.75" x2="898.0291" y2="940.5402" marker-end="url(#StickArrow_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <g id="Line_48">
+        <line x1="553.84583" y1="849.75" x2="488.22913" y2="940.3715" marker-end="url(#StickArrow_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
       </g>
-      <g id="Group_195">
-        <g id="Graphic_197">
-          <rect x="511.1852" y="946" width="190" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <text transform="translate(516.1852 951.268)" fill="#b1001c">
+      <g id="Group_45">
+        <g id="Graphic_47">
+          <rect x="604.1852" y="954" width="190" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(609.1852 959.268)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="12.352" y="16">Customer: Structure</tspan>
           </text>
         </g>
-        <g id="Graphic_196">
-          <rect x="511" y="976" width="190" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <text transform="translate(516 981.268)" fill="#b1001c">
+        <g id="Graphic_46">
+          <rect x="604" y="984" width="190" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <text transform="translate(609 989.268)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- name: “Customer”</tspan>
           </text>
         </g>
       </g>
-      <g id="Line_201">
-        <line x1="560.9098" y1="849.75" x2="593.7819" y2="930.5229" marker-end="url(#StickArrow_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <g id="Line_44">
+        <line x1="580.8758" y1="849.75" x2="672.361" y2="941.9626" marker-end="url(#StickArrow_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
       </g>
     </g>
     <g id="Action: 1-Tactic">
       <title>1-Tactic</title>
-      <g id="Group_19">
-        <g id="Graphic_21">
+      <g id="Group_13">
+        <g id="Graphic_15">
           <rect x="431" y="684" width="247" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
           <text transform="translate(436 689.26794)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="36.004" y="16">reducingAmps: Tactic</tspan>
           </text>
         </g>
-        <g id="Graphic_20">
+        <g id="Graphic_14">
           <rect x="431" y="714" width="247" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
           <text transform="translate(436 719.26794)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- name: “reducingAmps”</tspan>
           </text>
         </g>
       </g>
-      <g id="Line_25">
+      <g id="Line_12">
         <line x1="669.80086" y1="633.1669" x2="582.08475" y2="683.25" marker-start="url(#FilledDiamond_Marker)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
       </g>
     </g>
     <g id="Action: 1-Strategies">
       <title>1-Strategies</title>
-      <g id="Group_10">
-        <g id="Graphic_12">
+      <g id="Group_3">
+        <g id="Graphic_5">
           <rect x="586" y="565.5" width="247" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
           <text transform="translate(591 570.76794)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="6.508" y="16">managingCustomer: Strategy</tspan>
           </text>
         </g>
-        <g id="Graphic_11">
+        <g id="Graphic_4">
           <rect x="586" y="595.5" width="247" height="30" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
           <text transform="translate(591 600.76794)" fill="#b1001c">
             <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#b1001c" x="0" y="16">- name: “managingCustomer”</tspan>
