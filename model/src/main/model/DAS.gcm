@@ -33,11 +33,11 @@ class Context {
     rel structures: Structure
 }
 
-class Information{}
+class Information{
+    att name: String
+}
 
 class  Structure extends Information {
-    att name: String
-
     rel inner: Structure
     rel properties: Property
     rel values: StructureValue oppositeOf structure
@@ -45,18 +45,30 @@ class  Structure extends Information {
     rel parent: Structure
 }
 
-class StructureValue {
+class Value {
+    rel inputOf: Decision oppositeOf input
+    rel impactedBy: Decision oppositeOf impact
+
+    rel valueOf: Property oppositeOf values
+    rel expectedOf: Property oppositeOf expected
+
+    rel uncertainty: Uncertainty
+
+    rel impactedByExec: Execution oppositeOf impactedValues
+    rel usedByExec: Execution oppositeOf usedBy
+}
+
+class StructureValue extends Value {
     ref structure: Structure oppositeOf values
-    rel values: Value
+    rel values: PropValue
 }
 
 class Property extends Information {
     att name: String
-    att isHistoric: Boolean
+    att isTemporal: Boolean
     att isStatic: Boolean
 
-    rel values: Value oppositeOf valueOf
-    rel expected: Value oppositeOf expectedOf
+    rel values: PropValue oppositeOf valueOf
 
     rel consistentWith: Property oppositeOf isConsistentWith
     rel isConsistentWith: Property oppositeOf consistentWith
@@ -67,8 +79,12 @@ class Property extends Information {
     rel influence: Property oppositeOf isInfluencedBy
     rel isInfluencedBy: Property oppositeOf influence
 
-    ref source: Source
+    rel source: Source
     rel uncertainty: Uncertainty
+}
+
+class PropValue extends Value {
+    rel prop: Property oppositeOf values
 }
 
 class Attribute extends Property{
@@ -82,20 +98,7 @@ class Relation extends Property {
 }
 
 
-class Value {
-    rel inputOf: Decision oppositeOf input
-    rel impactedBy: Decision oppositeOf impact
-
-    rel valueOf: Property oppositeOf values
-    rel expectedOf: Property oppositeOf expected
-
-    rel uncertainty: Uncertainty
-}
-
-class Source {
-    rel information: Information
-}
-
+class Source {}
 class Sensor extends Source {}
 class User extends Source {}
 class Computation extends Source {
@@ -117,15 +120,15 @@ class Tactic {
     att name: String
 
     ref strategy: Strategy oppositeOf tactics
-    ref condition: Condition
+    ref query: TemporalQuery
     rel actions: Action oppositeOf tactic
 
     rel isExecutedBy: Decision oppositeOf execute
 
-    ref executions: TacticExecution
+    ref tacticExec: TacticExecution oppositeOf tactic
 }
 
-class Condition {
+class TemporalQuery {
     rel implement: Goal oppositeOf isImplementedBy
     rel input: Information
 }
@@ -133,19 +136,26 @@ class Condition {
 class Action {
     att name: String
 
-    rel impacted: Information
+    rel impact: Information
     ref tactic: Tactic oppositeOf actions
 
-    ref executions: ActionExecution
+    ref executions: ActionExecution oppositeOf action
 }
 
 class Execution {
   att status: String
+  att start: Long
+  att stop: Long
+
+  rel usedValues: Value oppositeOf usedByExec
+  rel impactedValues: Value oppositeOf impactedByExec
 }
 
-class ActionExecution {}
-class TacticExecution {
+class ActionExecution extends Execution {}
+class TacticExecution extends Execution {
     rel actionsExec: ActionExecution
+
+    ref tactic: Tactic oppositeOf tacticExec
 }
 
 
@@ -162,7 +172,7 @@ class Nature {
 
 class Goal {
     att goal: String
-    rel isImplementedBy: Condition oppositeOf implement
+    rel isImplementedBy: TemporalQuery oppositeOf implement
     ref requirement: Requirement oppositeOf goals
 
     ref nature: Nature
@@ -171,7 +181,7 @@ class Goal {
 
 
 class Constraint extends Nature {
-    ref applyOn: ConstrainedNature
+    ref appliesTo: ConstrainedNature
 }
 
 class ConstrainedNature extends Nature {}
