@@ -9,29 +9,44 @@ We describe how to use our solution to diagnose adaptive systems.
 We will first describe the example, then the different steps that engineers will have to do to use our approach.
 As this approach is a Model-Driven Engineering (MDE), using our approach mainly means instantiating the proposed meta-model.
 **Disclaimer:** We have not developed any specific language to instantiate easily our meta-model. To do so, an engineer will have to use our Java or javascript API.
-To show how to instantiate our meta-model, we describe both an object model and a Java code. The complete object model can be seen here (https://lmouline.github.io/LDAS/) and the Java code [here](src/main/java).
+To show how to instantiate our meta-model, we describe both an object model and a Java code. The complete object model can be seen [here](https://lmouline.github.io/LDAS/) and the Java code [here](src/main/java).
 
 ## Description of the example
 
 The National Institute of Standards and Technology (NIST) defines smart grids as "a modernized grid that enables bidirectional flows of energy and uses two-way communication and **control capabilities** that will lead to a collection of **new functionalities and applications**".
 These capabilities, functionalities, and applications can be implemented using approaches developed by the adaptive system community [1].
 
-Hartmann et al., [2] described the smart grid at Luxembourg with three elements: central system, concentrator, and smart meters.
-Smart meters regularly measure resource consumption (water, gas, or electricity) and report them to the central systems through the concentrator.
+Hartmann et al., [2] described the smart grid at Luxembourg as a hierarchical system composed of three elements: central system, data concentrator, and smart meter.
+Smart meters regularly measure resource consumption (water, gas, or electricity) and report them to the central system through the data concentrator.
 A smart meter can also modify the maximal consumption or even cut off the resource.
-In addition to storing the consumption data, concentrators autonomously manage smart meters according to the configuration sent by the central system.
+In addition to storing the consumption data, data concentrators autonomously manage smart meters according to the configuration sent by the central system.
 
-Among the different goals of concentrators, they have to avoid any overload on the network.
+Among the different goals of data concentrators, they have to avoid any overload on the network.
+We called it the "*no overload*" policy.
 They have two action points: either on the production side or the consumption side.
-They can reduce or increase the production by (dis)connecting production unit or the consumption by modifying the maximally allowed consumption.
+They can reduce or increase the production by (dis)connecting production unit or the consumption by modifying the maximum permitted consumption.
+We called these actions: "*reduce production*", "*increase production*", "*reduce amps limit*" and "*increase amps limit*".
 However, as all adaptive systems, smart grids are prone to failures [1].
+Using our approach, an engineer could diagnose the system, and determine the adaptation process responsible for this failure.
+For instance, considering some reports about regular power cuts during the last couple of days, in a particular area, a stakeholder may want to interrogate the system and determine what past decision(s) have led to this suboptimal state.
+More concretely, he will ask:
 
-Using our approach, an engineer or a system could try to answer the following questions:
+- **Did the system make any decisions that could have impacted the customer consumption?**
+- **If so, what goal(s) the system was trying to reach and what were the values used at the time the decision(s) was(were) made?**
 
-- what goal(s) the system was trying to reach by cutting off the power consumption of the building B?
-- when the system has decided to reduce the power consumption of M. and Mrs. X, what was the load of the network of their districts?
-- when the system has decided to connect the production unit, what was the expected network load?
-- yesterday, there was an overload in the district Z, what were the decisions that have modified the network load during all the previous day?
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Introduction
 
