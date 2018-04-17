@@ -9,7 +9,7 @@ We describe how to use our solution to diagnose adaptive systems.
 We will first describe the example, then the different steps that engineers will have to do to use our approach.
 As this approach is a Model-Driven Engineering (MDE), using our approach mainly means instantiating the proposed meta-model.
 **Disclaimer:** We have not developed any specific language to instantiate easily our meta-model. To do so, an engineer will have to use our Java or javascript API.
-To show how to instantiate our meta-model, we describe both an object model and a Java code. The complete object model can be seen here (**TODO**) and the Java code [here](src/main/java).
+To show how to instantiate our meta-model, we describe both an object model and a Java code. The complete object model can be seen here (https://lmouline.github.io/LDAS/) and the Java code [here](src/main/java).
 
 ## Description of the example
 

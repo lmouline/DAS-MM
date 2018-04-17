@@ -11,10 +11,7 @@ This repository is my main playground to develop techniques for (self-)adaptive 
 
 ### Graphical version
 
-![](img/action-mm.svg)
-![](img/context-mm.svg)
-![](img/requirement-mm.svg)
-![](img/knowledge-mm.svg)
+**TBD**
 
 ### Dependencies
 
@@ -38,10 +35,10 @@ If you use a released version, add the following repository:
   <id>inria.artifactory</id>
   <url>http://maven.inria.fr/artifactory/public-snapshot</url>
   <snapshots>
-    <enabled>true</enabled>
+    <enabled>false</enabled>
   </snapshots>
   <releases>
-    <enabled>false</enabled>
+    <enabled>true</enabled>
   </releases>
 </repository>
 ```
@@ -52,10 +49,10 @@ Otherwise:
   <id>inria.artifactory</id>
   <url>http://maven.inria.fr/artifactory/public-release/</url>
   <snapshots>
-    <enabled>false</enabled>
+    <enabled>true</enabled>
   </snapshots>
   <releases>
-    <enabled>true</enabled>
+    <enabled>false</enabled>
   </releases>
 </repository>
 ```
