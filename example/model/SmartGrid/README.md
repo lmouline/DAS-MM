@@ -1,11 +1,14 @@
 Model Example: SmartGrid at Luxembourg
 --------------------------------------
 
-To allow interactive diagnosis of adaptive systems, we developed a model-based solution *Amine:* **How? By tracing ... (just a small sentence)**.
-In this example, we will describe how to use our solution on a smart grid system.
-We will first describe a smart grid example, then the different steps that engineers will have to do to use our approach.
+We strongly think that developers need diagnosis support that trace system states to the previous circumstances --targeted requirements, input context-- that had resulted in these decisions.
+To tackle this problem, we propose a novel temporal data model to represent, store and query decisions as well as their relationship with the knowledge (context, requirements, and actions).
+
+In this repository, we detailed an example based on the smart grid at Luxembourg.
+We describe how to use our solution to diagnose adaptive systems.
+We will first describe the example, then the different steps that engineers will have to do to use our approach.
 As this approach is a Model-Driven Engineering (MDE), using our approach mainly means instantiating the proposed meta-model.
-**Disclaimer:** We have not developed any specific language to instantiate easily our meta-model. To do so, an engineer will have to use our basic Java or javascript API. *Amine:* **Rather, you should say that this is left for future work!**
+**Disclaimer:** We have not developed any specific language to instantiate easily our meta-model. To do so, an engineer will have to use our Java or javascript API.
 To show how to instantiate our meta-model, we describe both an object model and a Java code. The complete object model can be seen here (**TODO**) and the Java code [here](src/main/java).
 
 ## Description of the example
