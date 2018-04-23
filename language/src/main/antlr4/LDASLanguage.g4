@@ -1,5 +1,5 @@
 /**
- * Copyright 2017 The LDAS Authors.  All rights reserved.
+ * Copyright 2017 The LDAS authors.  All rights reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- grammar LDASLanguage;
+grammar LDASLanguage;
+
 
 fragment ESC : '\\' (["\\/bfnrt] | UNICODE) ;
 fragment UNICODE : 'u' HEX HEX HEX HEX ;
@@ -26,11 +27,14 @@ NUMBER : [\-]?[0-9]+'.'?[0-9]*;
 PRIMITIVE_TYPE: ('boolean' | 'cahr' | 'string' | 'byte' | 'int' | 'double' | 'long' | 'float');
 ARRAY_TYPE: PRIMITIVE_TYPE '[]';
 
-knowledgeDcl: importDcl* contextDcl;
+// Postpone
+//knowledgeDcl: importDcl* contextDcl;
+//
+//importDcl: 'import' pathOrName=STRING;
 
-importDcl: 'import' pathOrName=STRING;
+knowledgeDcl: contextDcl;
 
-contextDcl: 'context' ctxName=STRING '{' (attributeDcl | structureDcl | fragmentDcl)* '}';
+contextDcl: 'context' ctxName=IDENT '{' (attributeDcl | structureDcl | fragmentDcl)* '}';
 attributeDcl: (varDcl | constDcl | tempVarDcl);
 varDcl: 'var' varName=IDENT ':' type=(PRIMITIVE_TYPE|ARRAY_TYPE);
 constDcl: 'const' varName=IDENT ':' type=(PRIMITIVE_TYPE|ARRAY_TYPE) ('=' STRING | IDENT | NUMBER)?;
@@ -48,6 +52,8 @@ connectionDcl: (influenceDcl | computedDcl | consistentDcl);
 influenceDcl: 'influence' IDENT (',' IDENT)*;
 computedDcl: 'computed' IDENT (',' IDENT)*;
 consistentDcl: 'consistent' IDENT (',' IDENT)*;
+
+WS: [ \t\n\r]+ -> skip;
 
 
 

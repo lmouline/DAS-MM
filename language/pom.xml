@@ -32,8 +32,9 @@
     <name>LDAS :: Language</name>
 
     <properties>
-            <antlr.version>4.7.1</antlr.version>
+        <antlr.version>4.7.1</antlr.version>
         <header.path>${basedir}/../HEADER</header.path>
+        <javapoet.version>1.10.0</javapoet.version>
     </properties>
 
     <dependencies>
@@ -41,6 +42,32 @@
             <groupId>org.antlr</groupId>
             <artifactId>antlr4-runtime</artifactId>
             <version>${antlr.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup</groupId>
+            <artifactId>javapoet</artifactId>
+            <version>${javapoet.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.datathings</groupId>
+            <artifactId>greycat</artifactId>
+            <version>${greycat.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ldas</groupId>
+            <artifactId>model</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

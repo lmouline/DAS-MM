@@ -57,9 +57,6 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <compilerArguments>
-                        <profile>compact1</profile>
-                    </compilerArguments>
                 </configuration>
             </plugin>
 
@@ -74,6 +71,9 @@
                         <exclude>LICENSE</exclude>
                         <exclude>NOTICE</exclude>
                         <exclude>**/*.sh</exclude>
+                        <exclude>docs/**</exclude>
+                        <exclude>example/**</exclude>
+                        <exclude>**/*.ldas</exclude>
                     </excludes>
                 </configuration>
                 <executions>
