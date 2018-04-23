@@ -47,9 +47,9 @@ Note that, we do not address how runtime information is collected.
 
 ## Step 1: Describing the adaptation process at design time
 
-To describe the adaptation process at design time, you can use the [LDAS language](../../language).
+To describe the adaptation process at design time, you can use the [LDAS language](../../../language).
 Even if we use our language, this can be done using the model API (Java/Javascript/Typescript).
-To see how the LDAS language can be mapped to Java/Javascript/Typescript code, please read the [language documentation](../../language).
+To see how the LDAS language can be mapped to Java/Javascript/Typescript code, please read the [language documentation](../../../language).
 
 ### Context
 
