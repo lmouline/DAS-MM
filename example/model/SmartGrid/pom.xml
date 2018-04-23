@@ -19,11 +19,11 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>snt.das.model.example</groupId>
+    <groupId>ldas.model.example</groupId>
     <artifactId>smartgrid</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <name>DAS :: Model:: Smart Grid UC</name>
+    <name>LDAS :: Model:: Smart Grid UC</name>
 
     <properties>
         <das.model>1.0.5-SNAPSHOT</das.model>

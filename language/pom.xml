@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright 2017 the DAS authors.  All rights reserved.
+    Copyright 2017 the LDAS authors.  All rights reserved.
     <p>
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,7 +16,9 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>root</artifactId>
         <groupId>ldas</groupId>
@@ -23,48 +26,48 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>model</artifactId>
-    <version>1.0.5-SNAPSHOT</version>
-    <name>LDAS :: Model</name>
+    <groupId>ldas</groupId>
+    <artifactId>language</artifactId>
+
+    <name>LDAS :: Language</name>
 
     <properties>
+            <antlr.version>4.7.1</antlr.version>
         <header.path>${basedir}/../HEADER</header.path>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.datathings</groupId>
-            <artifactId>greycat</artifactId>
-            <version>${greycat.version}</version>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>${antlr.version}</version>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
             <plugin>
-                <groupId>com.datathings</groupId>
-                <artifactId>greycat-mavenplugin</artifactId>
-                <version>${greycat.version}</version>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-maven-plugin</artifactId>
+                <version>${antlr.version}</version>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/generated-sources/antlr4/ldas/language</outputDirectory>
+                    <arguments>
+                        <argument>-package</argument>
+                        <argument>ldas.language</argument>
+                    </arguments>
+                </configuration>
                 <executions>
                     <execution>
-                        <id>ModelGeneration</id>
-                        <phase>generate-sources</phase>
                         <goals>
-                            <goal>generate</goal>
+                            <goal>antlr4</goal>
                         </goals>
-                        <configuration>
-                            <generateJS>false</generateJS>
-                            <input>${basedir}/src/main/model/DAS.gcm</input>
-                            <pluginName>DASModelPlugin</pluginName>
-                            <packageName>das.model</packageName>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
-
-
 
 
 </project>

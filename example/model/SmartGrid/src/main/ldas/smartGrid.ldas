@@ -1,0 +1,75 @@
+context SmartGridCtx {
+    structure Consumption {
+        temporal measuringTime: long
+        temporal consumption: float
+        temporal production: float
+        temporal voltage: float
+        temporal current: float
+    }
+
+    fragment Entity {
+        const id: string
+        const serialNumber: string
+        temporal communicationActive: boolean
+
+        temporal consumptionData: Consumption
+        temporal registerBy: Entity oppositeOf registeredEntities
+        temporal registeredEntities: Entity oppositeOf registerBy
+
+        temporal communicationMedias: CommunicationMedia
+
+        rel location: Location
+    }
+
+    structure Location {
+        const address: string {
+            source Human
+        }
+        const gpsLatitude: string
+        const gpsLongitude: string
+    }
+
+    fragment CommunicationMedia {
+        const id: string
+        temporal payload: double
+    }
+
+    structure WirelessCommunicationMedia extends CommunicationMedia {}
+
+    structure WiredCommunicationMedia {
+        const remark: string
+        const size: float
+        const material: string
+
+        rel endPoint: Location
+        rel startPoint: Location
+    }
+
+    structure PLC extends WiredCommunicationMedia {}
+
+
+    structure Concentrator extends Entity {}
+    structure CentralSystem extends Entity {}
+
+    fragment Meter extends Entity {
+        rel customer: Customer
+    }
+
+    structure SmartMeter extends Meter {
+        temporal maxAlloedPower: float
+        temporal duration2Read: float
+        temporal hops2concentrator: int
+        temporal electricityActive: Boolean
+        temporal highPowerCurrentActive: boolean
+        temporal distance2concentrator: float
+        temporal isRepeater: boolean
+    }
+
+    structure GasMeter extends Meter {}
+
+    structure WaterMeter extends Meter {}
+
+
+
+    structure Customer {}
+}
