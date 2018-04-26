@@ -15,10 +15,10 @@
  */
 package ldas.language;
 
-public final class Context {
+public final class ContextNode {
     private final String name;
 
-    public Context(String name) {
+    public ContextNode(String name) {
         this.name = name;
     }
 

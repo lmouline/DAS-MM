@@ -13,17 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ldas.language.generator.test.expected;
+package ldas.language.generator;
 
-import ldas.model.Contexts;
-import greycat.Task;
-import greycat.Tasks;
+public class GenerationException extends Exception {
 
-final class Context {
-
-
-    static Task CONTEXT_GEN = Tasks.newTask()
-            .createTypedNode(ldas.model.Context.META.name)
-            .setAttribute(ldas.model.Context.NAME.name, ldas.model.Context.NAME.type, "SmartGridCtx")
-            .updateIndex(Contexts.META.name);
+    GenerationException(String msg) {
+        super(msg);
+    }
 }

@@ -55,8 +55,8 @@
                         <configuration>
                             <generateJS>false</generateJS>
                             <input>${basedir}/src/main/model/DAS.gcm</input>
-                            <pluginName>DASModelPlugin</pluginName>
-                            <packageName>das.model</packageName>
+                            <pluginName>LDASModelPlugin</pluginName>
+                            <packageName>ldas.model</packageName>
                         </configuration>
                     </execution>
                 </executions>

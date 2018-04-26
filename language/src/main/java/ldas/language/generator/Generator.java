@@ -29,7 +29,7 @@ public final class Generator {
     private Model model;
 
 
-    public void parse(File srcFile) {
+    public void parse(File srcFile) throws GenerationException{
         if(srcFile == null) {
             return;
         }
@@ -37,11 +37,11 @@ public final class Generator {
         if(srcFile.getName().endsWith(FILE_EXTENSION)) {
            model = ModelGen.parse(srcFile);
         } else {
-            throw new RuntimeException("File should have " + FILE_EXTENSION + " extension.");
+            throw new GenerationException("File should have " + FILE_EXTENSION + " extension.");
         }
     }
 
-    public void generateJava(String packageName, File dest) {
+    public void generateJava(String packageName, File dest) throws GenerationException{
         List<JavaFile> files = new ArrayList<>();
 
         files.add(MainGenerator.generate(packageName, model));
@@ -52,7 +52,7 @@ public final class Generator {
                 JavaFile file = files.get(i);
                 file.writeTo(dest);
             } catch (IOException e) {
-                e.printStackTrace();
+                throw new GenerationException(e.getMessage());
             }
         }
 

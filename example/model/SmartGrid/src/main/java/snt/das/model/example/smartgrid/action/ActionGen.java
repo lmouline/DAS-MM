@@ -1,11 +1,12 @@
 package snt.das.model.example.smartgrid.action;
 
-import das.model.*;
+import ldas.model.*;
 import greycat.Node;
 import greycat.Task;
 import greycat.TaskContext;
 import greycat.Tasks;
 
+@Deprecated
 public class ActionGen {
 
     private static final String CURRENT_STRATEGY = "strategy";
@@ -28,22 +29,22 @@ public class ActionGen {
             .readVar(CURRENT_STRATEGY)
             .addVarTo(Strategy.TACTICS.name, CURRENT_TACTIC)
             // Creation condition
-            .createTypedNode(Condition.META.name)
+            .createTypedNode(TemporalQuery.META.name)
             .setAsVar(CURRENT_CONDITION)
             .readVar(CURRENT_TACTIC)
-            .addVarTo(Tactic.CONDITION.name, CURRENT_CONDITION)
+            .addVarTo(Tactic.QUERY.name, CURRENT_CONDITION)
             .readIndex(Contexts.META.name)
             .traverse(Context.STRUCTURES.name)
             .setAsVar(ALL_STRUCTURES)
             .select((Node node, TaskContext ctx) -> ((Structure)node).getName().equals("Customer"))
             .setAsVar(CURRENT_INPUT)
             .readVar(CURRENT_CONDITION)
-            .addVarTo(Condition.INPUT.name, CURRENT_INPUT)
+            .addVarTo(TemporalQuery.INPUT.name, CURRENT_INPUT)
             .readVar(ALL_STRUCTURES)
             .select((Node node, TaskContext ctx) -> ((Structure)node).getName().equals("Meter"))
             .setAsVar(CURRENT_INPUT)
             .readVar(CURRENT_CONDITION)
-            .addVarTo(Condition.INPUT.name, CURRENT_INPUT)
+            .addVarTo(TemporalQuery.INPUT.name, CURRENT_INPUT)
             // Creation of actions
             .createTypedNode(Action.META.name)
             .setAttribute(Action.NAME.name, Action.NAME.type, "askReduce")
@@ -54,12 +55,12 @@ public class ActionGen {
             .select((Node node, TaskContext ctx) -> ((Structure)node).getName().equals("Consumption"))
             .setAsVar(CURRENT_IMPACT)
             .readVar(CURRENT_ACTION)
-            .addVarTo(Action.IMPACTED.name,CURRENT_IMPACT)
+            .addVarTo(Action.IMPACT.name,CURRENT_IMPACT)
             .readVar(ALL_STRUCTURES)
             .select((Node node, TaskContext ctx) -> ((Structure)node).getName().equals("Meter"))
             .setAsVar(CURRENT_IMPACT)
             .readVar(CURRENT_ACTION)
-            .addVarTo(Action.IMPACTED.name,CURRENT_IMPACT)
+            .addVarTo(Action.IMPACT.name,CURRENT_IMPACT)
             .createTypedNode(Action.META.name)
             .setAttribute(Action.NAME.name, Action.NAME.type, "checkNewLimit")
             .setAsVar(CURRENT_ACTION)

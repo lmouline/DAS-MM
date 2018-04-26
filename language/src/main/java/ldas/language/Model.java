@@ -21,7 +21,7 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.TokenSource;
 
 public final class Model {
-    private Context context;
+    private ContextNode context;
     private String name;
 
     Model(String name) {
@@ -39,7 +39,7 @@ public final class Model {
         ldas.language.LDASLanguageParser.ContextDclContext ctxDclContext = kdgeDclContext.contextDcl();
         if(ctxDclContext != null) {
             String ctxName = ctxDclContext.ctxName.getText();
-            this.context = new Context(ctxName);
+            this.context = new ContextNode(ctxName);
         }
 
     }
@@ -51,7 +51,7 @@ public final class Model {
         return this.name;
     }
 
-    public Context getContext() {
+    public ContextNode getContext() {
         return context;
     }
 }

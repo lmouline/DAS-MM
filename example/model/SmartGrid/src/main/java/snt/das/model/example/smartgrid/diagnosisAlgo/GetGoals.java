@@ -1,10 +1,11 @@
 package snt.das.model.example.smartgrid.diagnosisAlgo;
 
-import das.model.Condition;
-import das.model.Goal;
-import das.model.Tactic;
 import greycat.*;
+import ldas.model.Goal;
+import ldas.model.Tactic;
+import ldas.model.TemporalQuery;
 
+@Deprecated
 public class GetGoals {
 
     private static final String TACTICS = "tactics";
@@ -29,8 +30,8 @@ public class GetGoals {
                     .travelInTime("{{" + TIMED_TACTICS + "}}")
             )
             .readVar(TIMED_TACTICS)
-            .traverse(Tactic.CONDITION.name)
-            .traverse(Condition.IMPLEMENT.name)
+            .traverse(Tactic.QUERY.name)
+            .traverse(TemporalQuery.IMPLEMENT.name)
             .addToVar(GOALS);
 
     public static final Goal[] getGoals(final Graph graph, final Tactic[] t, final long[] times) {

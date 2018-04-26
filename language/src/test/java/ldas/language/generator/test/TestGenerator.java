@@ -15,6 +15,7 @@
  */
 package ldas.language.generator.test;
 
+import ldas.language.generator.GenerationException;
 import ldas.language.generator.Generator;
 import org.junit.Test;
 
@@ -33,7 +34,7 @@ public class TestGenerator {
 
             URI root = this.getClass().getResource("/").toURI();
             generator.generateJava("ldas.language.generator.test.actual",new File(root));
-        } catch (URISyntaxException e) {
+        } catch (URISyntaxException | GenerationException e) {
             e.printStackTrace();
         }
     }

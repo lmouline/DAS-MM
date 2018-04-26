@@ -1,9 +1,10 @@
 package snt.das.model.example.smartgrid.requirement;
 
-import das.model.*;
+import ldas.model.*;
 import greycat.Task;
 import greycat.Tasks;
 
+@Deprecated
 public class RequirementGen {
 
     private static final String CURRENT_REQ = "requirement";

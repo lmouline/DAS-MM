@@ -1,9 +1,10 @@
 package snt.das.model.example.smartgrid.knowledge;
 
-import das.model.*;
+import ldas.model.*;
 import greycat.Task;
 import greycat.Tasks;
 
+@Deprecated
 public class KnowledgeGen {
 
     private static final String CONTEXTS = "Contexts";

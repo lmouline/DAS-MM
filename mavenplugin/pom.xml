@@ -26,68 +26,55 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ldas</groupId>
-    <artifactId>language</artifactId>
+    <groupId>ldas.language</groupId>
+    <artifactId>mavenplugin</artifactId>
+    <packaging>maven-plugin</packaging>
 
-    <name>LDAS :: Language</name>
+    <name>LDAS :: Language :: MavenPlugin</name>
 
     <properties>
-        <antlr.version>4.7.1</antlr.version>
         <header.path>${basedir}/../HEADER</header.path>
-        <javapoet.version>1.10.0</javapoet.version>
+        <maven.core.version>3.3.9</maven.core.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.antlr</groupId>
-            <artifactId>antlr4-runtime</artifactId>
-            <version>${antlr.version}</version>
+            <groupId>org.apache.maven.plugin-tools</groupId>
+            <artifactId>maven-plugin-annotations</artifactId>
+            <version>3.4</version>
+            <scope>provided</scope>
         </dependency>
-
         <dependency>
-            <groupId>com.squareup</groupId>
-            <artifactId>javapoet</artifactId>
-            <version>${javapoet.version}</version>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>${maven.core.version}</version>
+            <scope>provided</scope>
         </dependency>
-
         <dependency>
-            <groupId>com.datathings</groupId>
-            <artifactId>greycat</artifactId>
-            <version>${greycat.version}</version>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-core</artifactId>
+            <version>${maven.core.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>ldas</groupId>
-            <artifactId>model</artifactId>
+            <artifactId>language</artifactId>
             <version>${project.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
-
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.antlr</groupId>
-                <artifactId>antlr4-maven-plugin</artifactId>
-                <version>${antlr.version}</version>
-                <configuration>
-                    <outputDirectory>${project.build.directory}/generated-sources/antlr4/ldas/language</outputDirectory>
-                    <arguments>
-                        <argument>-package</argument>
-                        <argument>ldas.language</argument>
-                    </arguments>
-                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-plugin-plugin</artifactId>
+                <version>3.3</version>
                 <executions>
                     <execution>
+                        <id>mojo-descriptor</id>
                         <goals>
-                            <goal>antlr4</goal>
+                            <goal>descriptor</goal>
                         </goals>
                     </execution>
                 </executions>

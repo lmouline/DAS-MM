@@ -26,14 +26,20 @@
     <name>LDAS :: Model:: Smart Grid UC</name>
 
     <properties>
-        <das.model>1.0.5-SNAPSHOT</das.model>
+        <ldas.version>1.0.5-SNAPSHOT</ldas.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>snt.das</groupId>
+            <groupId>ldas</groupId>
             <artifactId>model</artifactId>
-            <version>${das.model}</version>
+            <version>${ldas.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ldas</groupId>
+            <artifactId>language</artifactId>
+            <version>${ldas.version}</version>
         </dependency>
 
         <dependency>
@@ -63,6 +69,25 @@
                         <profile>compact1</profile>
                     </compilerArguments>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>ldas.language</groupId>
+                <artifactId>mavenplugin</artifactId>
+                <version>${ldas.version}</version>
+                <executions>
+                    <execution>
+                        <id>GenSGModel</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <input>${basedir}/src/main/resources/smartGrid.ldas</input>
+                            <packageName>ldas.example.smartgrid.model.init</packageName>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

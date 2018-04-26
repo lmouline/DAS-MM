@@ -15,26 +15,36 @@
  */
 package ldas.language.generator;
 
+import com.squareup.javapoet.CodeBlock;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeSpec;
 import greycat.Task;
-import ldas.language.Context;
+import greycat.Tasks;
+import ldas.language.ContextNode;
+import ldas.model.Context;
+import ldas.model.Contexts;
 
 import javax.lang.model.element.Modifier;
 
 final class ContextGenerator {
 
-    static JavaFile generate(String packagename, Context context) {
-        TypeSpec.Builder mainClass = TypeSpec.classBuilder("Context");
+    static JavaFile generate(String packagename, ContextNode context) {
+        TypeSpec.Builder mainClass = TypeSpec.classBuilder("ContextGen");
         mainClass.addModifiers(Modifier.PUBLIC, Modifier.FINAL);
 
-
         FieldSpec initTaskField = FieldSpec.builder(Task.class,"CONTEXT_GEN", Modifier.PUBLIC, Modifier.STATIC)
-                .initializer("Tasks.newTask()\n" +
-                        "            .createTypedNode(das.model.Context.META.name)\n" +
-                        "            .setAttribute(das.model.Context.NAME.name, das.model.Context.NAME.type, \"" + context.getName() +  "\")\n" +
-                        "            .updateIndex(Contexts.META.name);")
+//                .initializer("Tasks.newTask()\n" +
+//                        "            .createTypedNode(Context.META.name)\n" +
+//                        "            .setAttribute(Context.NAME.name, Context.NAME.type, \"" + context.getName() +  "\")\n" +
+//                        "            .updateIndex(Contexts.META.name);")
+                .initializer(CodeBlock.builder()
+                        .addStatement("$T.newTask()\n" +
+                                "            .createTypedNode($T.META.name)\n" +
+                                "            .setAttribute($T.NAME.name, $T.NAME.type, $S)\n" +
+                                "            .updateIndex($T.META.name);", Tasks.class,Context.class,Context.class, Context.class, context.getName(), Contexts.class )
+                        .build()
+                )
                 .build();
         mainClass.addField(initTaskField);
 

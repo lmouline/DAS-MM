@@ -1,9 +1,10 @@
 package snt.das.model.example.smartgrid.context;
 
-import das.model.*;
+import ldas.model.*;
 import greycat.Task;
 import greycat.Tasks;
 
+@Deprecated
 public class ContextGen {
     private static final String CONTEXT = "context";
 
@@ -111,7 +112,7 @@ public class ContextGen {
     private static final Task CONSUMPTION_PROP_GEN = Tasks.newTask()
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "measuringTime")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, "Date")
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -121,7 +122,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "consumption")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_NUMERICAL)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -131,7 +132,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "production")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_NUMERICAL)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -141,7 +142,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "voltage")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_NUMERICAL)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -151,7 +152,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "current")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_NUMERICAL)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -162,7 +163,7 @@ public class ContextGen {
     private static final Task ENTITY_PROP_GEN = Tasks.newTask()
             .createTypedNode(Relation.META.name)
             .setAttribute(Relation.NAME.name, Relation.NAME.type, "consumptionData")
-            .setAttribute(Relation.ISHISTORIC.name, Relation.ISHISTORIC.type, "true")
+            .setAttribute(Relation.ISTEMPORAL.name, Relation.ISTEMPORAL.type, "true")
             .setAttribute(Relation.ISSTATIC.name, Relation.ISSTATIC.type, "false")
             .addVarTo(Relation.TYPEREL.name, CONSUMPTION)
             .setAsVar(CURRENT_PROP)
@@ -171,7 +172,7 @@ public class ContextGen {
 
             .createTypedNode(Relation.META.name)
             .setAttribute(Relation.NAME.name, Relation.NAME.type, "registeredEntities")
-            .setAttribute(Relation.ISHISTORIC.name, Relation.ISHISTORIC.type, "true")
+            .setAttribute(Relation.ISTEMPORAL.name, Relation.ISTEMPORAL.type, "true")
             .setAttribute(Relation.ISSTATIC.name, Relation.ISSTATIC.type, "false")
             .addVarTo(Relation.TYPEREL.name, ENTITY)
             .setAsVar(CURRENT_PROP)
@@ -179,7 +180,7 @@ public class ContextGen {
             .addVarTo(Structure.PROPERTIES.name, CURRENT_PROP)
             // create source
             .createTypedNode(Sensor.META.name)
-            .addVarTo(Sensor.INFORMATION.name, ENTITY)
+//            .addVarTo(Sensor.INFORMATION.name, ENTITY)
             .setAsVar(CURRENT_SRC)
             .readVar(CURRENT_PROP)
             .addVarTo(Relation.SOURCE.name, CURRENT_SRC)
@@ -192,7 +193,7 @@ public class ContextGen {
 
             .createTypedNode(Relation.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "registerBy")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .addVarTo(Relation.TYPEREL.name, ENTITY)
             .setAsVar(CURRENT_PROP + "1")
@@ -204,7 +205,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "communicationActive")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_BOOLEAN)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -214,7 +215,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "serialNumber")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "false")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "false")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "true")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_TEXT)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -224,7 +225,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "id")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_TEXT)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -234,7 +235,7 @@ public class ContextGen {
 
             .createTypedNode(Relation.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "consumptionData")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .addVarTo(Relation.TYPEREL.name, COMMUNICATION_MEDIA)
             .setAsVar(CURRENT_PROP)
@@ -243,7 +244,7 @@ public class ContextGen {
 
             .createTypedNode(Relation.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "location")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .addVarTo(Relation.TYPEREL.name, LOCATION)
             .setAsVar(CURRENT_PROP)
@@ -254,7 +255,7 @@ public class ContextGen {
     private static final Task METER_PROP_GEN = Tasks.newTask()
             .createTypedNode(Relation.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "customer")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .addVarTo(Relation.TYPEREL.name, CUSTOMER)
             .setAsVar(CURRENT_PROP)
@@ -264,7 +265,7 @@ public class ContextGen {
     private static final Task SMARTMETER_PROP_GEN = Tasks.newTask()
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "isRepeater")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_BOOLEAN)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -274,7 +275,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "distance2concentrator")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_NUMERICAL)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -284,7 +285,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "highPowerCurrentActive")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_BOOLEAN)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -294,7 +295,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "electricityActive")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_BOOLEAN)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -304,7 +305,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "hops2concentrator")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_NUMERICAL)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -314,7 +315,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "duration2Read")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_NUMERICAL)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -324,7 +325,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "maxAllowedPower")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_NUMERICAL)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -335,7 +336,7 @@ public class ContextGen {
     private static final Task LOCATION_PROP_GEN = Tasks.newTask()
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "address")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "false")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "false")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_TEXT)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -345,7 +346,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "gpsLatitude")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_TEXT)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -355,7 +356,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "gpsLongitude")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_TEXT)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -366,7 +367,7 @@ public class ContextGen {
     private static final Task COMM_PROP_GEN = Tasks.newTask()
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "id")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_TEXT)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -376,7 +377,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "payload")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_NUMERICAL)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -387,7 +388,7 @@ public class ContextGen {
     private static final Task WIRED_COMM_PROP_GEN = Tasks.newTask()
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "material")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "false")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "false")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_TEXT)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -397,7 +398,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "size")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "false")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "false")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "true")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_NUMERICAL)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -407,7 +408,7 @@ public class ContextGen {
 
             .createTypedNode(Attribute.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "remark")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "true")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "true")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .setAttribute(Attribute.TYPEATT.name, Attribute.TYPEATT.type, Constants.TYPE_TEXT)
             .setAttribute(Attribute.ISARRAY.name, Attribute.ISARRAY.type, "false")
@@ -417,7 +418,7 @@ public class ContextGen {
 
             .createTypedNode(Relation.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "endPoint")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "false")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "false")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .addVarTo(Relation.TYPEREL.name, LOCATION)
             .setAsVar(CURRENT_PROP)
@@ -426,7 +427,7 @@ public class ContextGen {
 
             .createTypedNode(Relation.META.name)
             .setAttribute(Attribute.NAME.name, Attribute.NAME.type, "startPoint")
-            .setAttribute(Attribute.ISHISTORIC.name, Attribute.ISHISTORIC.type, "false")
+            .setAttribute(Attribute.ISTEMPORAL.name, Attribute.ISTEMPORAL.type, "false")
             .setAttribute(Attribute.ISSTATIC.name, Attribute.ISSTATIC.type, "false")
             .addVarTo(Relation.TYPEREL.name, LOCATION)
             .setAsVar(CURRENT_PROP)
@@ -434,7 +435,7 @@ public class ContextGen {
             .addVarTo(Structure.PROPERTIES.name, CURRENT_PROP);
 
 
-    public static final Task CONTEXT_GEN = Tasks.newTask()
+    public static final Task CONTEXT_GEN_OLD = Tasks.newTask()
             .createTypedNode(Context.META.name)
             .setAttribute(Context.NAME.name, Context.NAME.type, "smartGridCtx")
             .setAsVar(CONTEXT)

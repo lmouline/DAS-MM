@@ -15,10 +15,12 @@
  */
 package ldas.language.generator;
 
+import com.squareup.javapoet.CodeBlock;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeSpec;
 import greycat.Task;
+import greycat.Tasks;
 import ldas.language.Model;
 
 import javax.lang.model.element.Modifier;
@@ -32,11 +34,14 @@ final class MainGenerator {
 
 
         FieldSpec initTaskField = FieldSpec.builder(Task.class,"initTask", Modifier.PUBLIC, Modifier.STATIC)
-                .initializer("Tasks.newTask()\n" +
-                        "            .travelInWorld(\"0\")\n" +
-                        "            .travelInTime(System.currentTimeMillis() + \"\")\n" +
-                        "            .pipe(CONTEXT_GEN)\n" +
-                        "            .save();")
+                .initializer(CodeBlock.builder()
+                        .addStatement("$T.newTask()\n" +
+                        "            .travelInWorld($S)\n" +
+                        "            .travelInTime($T.currentTimeMillis() + $S)\n" +
+                        "            .pipe(ContextGen.CONTEXT_GEN)\n" +
+                        "            .save();", Tasks.class,"0",System.class,"")
+                        .build()
+                )
                 .build();
         mainClass.addField(initTaskField);
 
