@@ -23,7 +23,15 @@ public class Runner {
             SmartGrid.initTask.execute(graph, new Callback<TaskResult>() {
                 @Override
                 public void on(TaskResult result) {
+                    if (result.exception() != null) {
+                        result.exception().printStackTrace();
+                    }
 
+                    if(result.output() != null) {
+                        System.out.println(result.output());
+                    }
+
+                    System.out.println("Done");
                 }
             });
         });
