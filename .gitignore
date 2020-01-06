@@ -2,4 +2,10 @@
 *.iml
 **/target
 
+node_modules
+
+.vscode
+
 example/model/SmartGrid/data
+example/model/SmartGrid/website/build
+example/model/SmartGrid/website/public/data

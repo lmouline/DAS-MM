@@ -14,30 +14,30 @@ public class Runner {
 
         Graph graph = new GraphBuilder()
                 .withPlugin(new LDASModelPlugin())
-                .withStorage(new RocksDBStorage("./example/model/SmartGrid/data"))
-                .build();
+                .withStorage(new RocksDBStorage("./example/model/SmartGrid/myDb"))
+        .build();
 
         graph.connect((Boolean connectOK) -> {
 
-            // Initialize the model with design elements
-            SmartGrid.initTask.execute(graph, new Callback<TaskResult>() {
-                @Override
-                public void on(TaskResult result) {
-                    if (result.exception() != null) {
-                        result.exception().printStackTrace();
-                    }
+        // Initialize the model with design elements
+        SmartGrid.initTask.execute(graph, new Callback<TaskResult>() {
+@Override
+public void on(TaskResult result) {
+        if (result.exception() != null) {
+        result.exception().printStackTrace();
+        }
 
-                    if(result.output() != null) {
-                        System.out.println(result.output());
-                    }
+        if(result.output() != null) {
+        System.out.println(result.output());
+        }
 
-                    System.out.println("Done");
-                }
-            });
+        System.out.println("Done");
+        }
+        });
         });
 
 
 
 
-    }
-}
+        }
+        }
